@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZhongKe Fastener — Complete Product Catalog 2025</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI','PingFang SC','Microsoft YaHei',system-ui,sans-serif;
+    font-size: 9pt; color: #1a1f2a; line-height: 1.58; max-width: 210mm; margin: 0 auto;
+  }
+
+  /* COVER */
+  .cover {
+    page-break-after: always; display: flex; flex-direction: column; justify-content: center;
+    height: 257mm; text-align: center; position: relative; padding: 40px;
+    background: #060e1a;
+    background-image:
+      radial-gradient(ellipse at 25% 15%, rgba(244,129,32,0.09) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 85%, rgba(212,160,23,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 60% 40%, rgba(244,129,32,0.04) 0%, transparent 40%);
+  }
+  .cover-top { font-size: 9pt; color: rgba(255,255,255,0.35); letter-spacing: 0.5em; text-transform: uppercase; margin-bottom: 56px; }
+  .cover-logo { font-size: 54pt; font-weight: 900; letter-spacing: -0.03em; color: #fff; margin-bottom: 4px; }
+  .cover-logo em { color: #f48120; font-style: normal; }
+  .cover-tag { font-size: 14pt; color: rgba(255,255,255,0.45); font-weight: 300; margin-bottom: 60px; }
+  .cover-line { width: 90px; height: 3px; background: #f48120; margin: 0 auto 56px; }
+  .cover-meta { font-size: 9pt; color: rgba(255,255,255,0.35); line-height: 2.2; }
+  .cover-foot { position: absolute; bottom: 40px; left: 0; right: 0; font-size: 7.5pt; color: rgba(255,255,255,0.18); }
+  .cover-qr { position: absolute; bottom: 60px; right: 60px; width: 80px; height: 80px; border: 2px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 6pt; color: rgba(255,255,255,0.2); border-radius: 6px; }
+
+  /* TABLE OF CONTENTS */
+  .toc { page-break-after: always; padding-top: 20px; }
+  .toc h2 { font-size: 16pt; font-weight: 800; color: #060e1a; border-bottom: 3px solid #f48120; padding-bottom: 8px; margin-bottom: 24px; }
+  .toc-item { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px dotted #d0d3db; font-size: 10pt; }
+  .toc-item strong { color: #060e1a; }
+  .toc-item span { color: #939bb0; font-size: 8pt; }
+
+  /* PAGE HEADER */
+  .ph { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f48120; padding-bottom: 7px; margin-bottom: 16px; }
+  .ph h2 { font-size: 12pt; font-weight: 800; color: #060e1a; }
+  .ph .ph-r { font-size: 7pt; color: #939bb0; text-align: right; }
+
+  /* SECTION TITLE */
+  .st { font-size: 13pt; font-weight: 800; color: #060e1a; border-bottom: 2.5px solid #f48120; padding-bottom: 4px; margin-bottom: 12px; }
+
+  /* STATS */
+  .sr { display: flex; gap: 10px; margin-bottom: 16px; }
+  .sb {
+    flex: 1; border: 1.5px solid #e4e6ec; border-radius: 5px; text-align: center;
+    padding: 12px 6px; background: #fafbfc;
+  }
+  .sb .n { font-size: 17pt; font-weight: 900; color: #f48120; }
+  .sb .l { font-size: 7pt; color: #6b738a; margin-top: 2px; text-transform: uppercase; font-weight: 600; }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 7.8pt; margin-bottom: 8px; }
+  thead th {
+    background: #060e1a; color: #fff; padding: 7px 7px; text-align: left;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 6.8pt;
+  }
+  thead th:first-child { border-radius: 3px 0 0 0; }
+  thead th:last-child { border-radius: 0 3px 0 0; }
+  tbody td { padding: 5px 7px; border-bottom: 1px solid #eef0f4; }
+  tbody tr:nth-child(even) { background: #f9fafc; }
+  .tg { display: inline-block; background: #eff0f5; padding: 2px 5px; border-radius: 3px; font-size: 6.8pt; margin: 1px; color: #50576b; border: 1px solid #e0e2e7; }
+  .gd { display: inline-block; background: #fef3e8; color: #f48120; padding: 2px 6px; border-radius: 3px; font-size: 6.8pt; font-weight: 700; }
+  .gr { display: inline-block; background: #e8f5ec; color: #0ea95a; padding: 2px 6px; border-radius: 3px; font-size: 6.8pt; font-weight: 700; }
+
+  /* SECTIONS */
+  .sec { page-break-inside: avoid; margin-bottom: 18px; }
+
+  /* TWO COL */
+  .tc { display: flex; gap: 14px; }
+  .tc > div { flex: 1; }
+
+  /* CTA */
+  .cta {
+    text-align: center; padding: 18px; margin: 10px 0;
+    background: linear-gradient(135deg, #fef3e8, #fef9f4);
+    border: 1.5px dashed #f48120; border-radius: 8px;
+  }
+  .cta h3 { color: #f48120; font-size: 11pt; margin-bottom: 4px; }
+  .cta p { font-size: 8pt; color: #50576b; }
+
+  /* APP TABLE */
+  .app-table { font-size: 7.8pt; }
+  .app-table td { vertical-align: top; }
+  .app-cell { padding: 4px; }
+
+  /* CHECK */
+  .chk { list-style: none; }
+  .chk li { padding: 3px 0; font-size: 7.8pt; color: #50576b; }
+  .chk li::before { content: '✓ '; color: #0ea95a; font-weight: 700; }
+  .star li::before { content: '★ '; color: #f48120; font-weight: 700; }
+
+  /* FAQ */
+  .faq-q { font-weight: 700; color: #060e1a; margin-top: 8px; font-size: 8.5pt; }
+  .faq-a { color: #50576b; margin-bottom: 6px; font-size: 8pt; margin-left: 8px; border-left: 2px solid #f48120; padding-left: 8px; }
+
+  /* CONTACT PAGE */
+  .cp {
+    page-break-before: always; background: #060e1a; color: #fff; padding: 40px;
+    display: flex; flex-direction: column; justify-content: center; height: 245mm;
+    background-image: radial-gradient(ellipse at 30% 30%, rgba(244,129,32,0.07) 0%, transparent 50%);
+  }
+  .cp h2 { color: #fff; font-size: 20pt; margin-bottom: 6px; }
+  .cp .cpsub { color: rgba(255,255,255,0.45); font-size: 9pt; margin-bottom: 28px; }
+  .cp .bigmail { font-size: 14pt; color: #f48120; font-weight: 700; margin: 16px 0; }
+  .cp .ir { display: flex; gap: 32px; margin-top: 20px; }
+  .cp .ib { flex: 1; }
+  .cp .ib h4 { color: #f48120; font-size: 8.5pt; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .cp .ib p { color: rgba(255,255,255,0.5); font-size: 7.8pt; line-height: 1.8; }
+  .cb { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+  .cbb { font-size: 7pt; padding: 4px 10px; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 20px; color: rgba(255,255,255,0.4); }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .cover, .cp { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    thead th { background: #060e1a !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sb { background: #fafbfc !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="cover">
+  <div class="cover-top">Est. 2005 · ISO 9001:2015 · Made in China</div>
+  <div class="cover-logo">Z<em>K</em> Fastener</div>
+  <div class="cover-tag">Industrial Fasteners — Built for Performance, Priced for Value</div>
+  <div class="cover-line"></div>
+  <div class="cover-meta">
+    ZhongKe Fastener Co., Ltd.<br>
+    Bolts · Nuts · Screws · Washers · Rivets · Pins & Shafts<br>
+    6 Product Lines · 5,000+ Specifications · 30+ Export Countries<br>
+    Jiangsu, China
+  </div>
+  <div class="cover-qr">Scan for<br>Website &<br>Contact</div>
+  <div class="cover-foot">PRODUCT CATALOG · 2025 EDITION · CONFIDENTIAL</div>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<div class="toc">
+  <h2>Contents</h2>
+  <div class="toc-item"><strong>01</strong> About Us<span>→ 3</span></div>
+  <div class="toc-item"><strong>02</strong> Production Process<span>→ 4</span></div>
+  <div class="toc-item"><strong>03</strong> Quality Control<span>→ 5</span></div>
+  <div class="toc-item"><strong>04</strong> Bolts<span>→ 6</span></div>
+  <div class="toc-item"><strong>05</strong> Nuts<span>→ 7</span></div>
+  <div class="toc-item"><strong>06</strong> Screws<span>→ 8</span></div>
+  <div class="toc-item"><strong>07</strong> Washers<span>→ 9</span></div>
+  <div class="toc-item"><strong>08</strong> Rivets<span>→ 9</span></div>
+  <div class="toc-item"><strong>09</strong> Pins & Shafts<span>→ 10</span></div>
+  <div class="toc-item"><strong>10</strong> Industry Applications<span>→ 11</span></div>
+  <div class="toc-item"><strong>11</strong> Material Grade Reference<span>→ 12</span></div>
+  <div class="toc-item"><strong>12</strong> Surface Finish Guide<span>→ 12</span></div>
+  <div class="toc-item"><strong>13</strong> Packaging & Logistics<span>→ 13</span></div>
+  <div class="toc-item"><strong>14</strong> FAQ<span>→ 14</span></div>
+  <div class="toc-item"><strong>15</strong> Contact & Inquiry<span>→ 15</span></div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<div class="st" style="margin-top:8px;">01 &nbsp; About ZhongKe Fastener</div>
+
+<div class="sr">
+  <div class="sb"><div class="n">2005</div><div class="l">Founded</div></div>
+  <div class="sb"><div class="n">15,000</div><div class="l">m² Facility</div></div>
+  <div class="sb"><div class="n">8,000+</div><div class="l">Tons/Year</div></div>
+  <div class="sb"><div class="n">5,000+</div><div class="l">Specifications</div></div>
+  <div class="sb"><div class="n">30+</div><div class="l">Countries</div></div>
+  <div class="sb"><div class="n">50+</div><div class="l">Production Units</div></div>
+  <div class="sb"><div class="n">98.5%</div><div class="l">OTIF Rate</div></div>
+</div>
+
+<p style="font-size:8.5pt;color:#50576b;margin-bottom:10px;">ZhongKe Fastener Co., Ltd. is a specialized manufacturer of industrial fasteners based in Dongtai, Jiangsu — one of China's most concentrated manufacturing corridors. Since 2005, we have grown from a single-line workshop into a fully integrated operation that handles everything in-house: cold heading, CNC turning, thread rolling, heat treatment, surface finishing, and automated optical inspection.</p>
+
+<div class="tc">
+  <div>
+    <h4 style="color:#f48120;margin-bottom:6px;font-size:9pt;">What We Make</h4>
+    <ul class="chk">
+      <li>Hex bolts, flange bolts, carriage bolts, U-bolts</li>
+      <li>Hex nuts, lock nuts, flange nuts, cap nuts, weld nuts</li>
+      <li>Self-tapping screws, machine screws, wood screws</li>
+      <li>Flat washers, spring washers, lock washers, sealing</li>
+      <li>Blind rivets, solid rivets, drive rivets, lockbolts</li>
+      <li>Dowel pins, taper pins, cotter pins, spring pins</li>
+      <li>Custom fasteners — any drawing, any material</li>
+    </ul>
+  </div>
+  <div>
+    <h4 style="color:#f48120;margin-bottom:6px;font-size:9pt;">Standards & Certifications</h4>
+    <ul class="chk">
+      <li>ISO 9001:2015 Quality Management</li>
+      <li>DIN / ISO / GB / ANSI / BS / JIS compliance</li>
+      <li>CE Certified for EU market entry</li>
+      <li>RoHS & REACH compliant materials available</li>
+      <li>Full Material Test Certificates (MTC) with every order</li>
+      <li>PPAP Level 1-3 available on request</li>
+      <li>Third-party inspection: SGS, TUV, Bureau Veritas</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cta" style="margin-top:12px;">
+  <h3>Need a quote? Email your spec to sales@zhongke-fastener.com</h3>
+  <p>We respond with pricing, lead time, and shipping options within 24 hours.</p>
+</div>
+
+<!-- ==================== PRODUCTION ==================== -->
+<div class="st">02 &nbsp; Production Process — From Steel to Shipment</div>
+<div class="sr">
+  <div class="sb"><div class="n">01</div><div class="l">Raw Material</div><div style="font-size:7pt;color:#50576b;margin-top:4px;">Certified mill steel · Incoming spectro check · MTC verification</div></div>
+  <div class="sb"><div class="n">02</div><div class="l">Cold Heading</div><div style="font-size:7pt;color:#50576b;margin-top:4px;">Multi-station formers · High-speed thread rolling · Precision dies</div></div>
+  <div class="sb"><div class="n">03</div><div class="l">Heat Treatment</div><div style="font-size:7pt;color:#50576b;margin-top:4px;">Controlled-atmosphere furnaces · Quench & temper · Case hardening</div></div>
+  <div class="sb"><div class="n">04</div><div class="l">Surface Finish</div><div style="font-size:7pt;color:#50576b;margin-top:4px;">Zinc · HDG · Dacromet · BO · Nickel · Chrome · Passivation</div></div>
+  <div class="sb"><div class="n">05</div><div class="l">QC & Sorting</div><div style="font-size:7pt;color:#50576b;margin-top:4px;">Optical sorters · Manual inspection · Dimensional spot checks</div></div>
+  <div class="sb"><div class="n">06</div><div class="l">Pack & Ship</div><div style="font-size:7pt;color:#50576b;margin-top:4px;">Export-grade cartons · Palletizing · Full documentation</div></div>
+</div>
+
+<!-- ==================== QUALITY ==================== -->
+<div class="st">03 &nbsp; Quality Control & Testing</div>
+<div class="tc">
+  <div>
+    <table>
+      <thead><tr><th>Test Type</th><th>Equipment</th><th>Standard</th></tr></thead>
+      <tbody>
+        <tr><td>Tensile Strength</td><td>Universal Testing Machine (300 kN)</td><td>ISO 6892-1</td></tr>
+        <tr><td>Yield & Elongation</td><td>Extensometer System</td><td>ISO 6892-1</td></tr>
+        <tr><td>Hardness</td><td>Rockwell / Brinell / Vickers</td><td>ISO 6508</td></tr>
+        <tr><td>Chemical Analysis</td><td>Optical Emission Spectrometer</td><td>ASTM E415</td></tr>
+        <tr><td>Salt Spray (Corrosion)</td><td>Cyclic Salt Spray Chamber</td><td>ISO 9227</td></tr>
+        <tr><td>Coating Thickness</td><td>X-Ray Fluorescence (XRF)</td><td>ISO 2178</td></tr>
+        <tr><td>Torque / Preload</td><td>Digital Torque-Tension System</td><td>ISO 16047</td></tr>
+        <tr><td>Metallography</td><td>Inverted Metallurgical Microscope</td><td>ASTM E3</td></tr>
+        <tr><td>Dimensional</td><td>Optical Comparator / CMM</td><td>ISO 2768</td></tr>
+        <tr><td>Proof Load</td><td>Hydraulic Proof Load Tester</td><td>ISO 898-1</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4 style="color:#f48120;margin-bottom:6px;font-size:9pt;">QC Sampling Plan</h4>
+    <ul class="chk">
+      <li>Incoming raw material: 100% spectro check</li>
+      <li>First-off approval at each production stage</li>
+      <li>In-process: hourly dimensional sampling</li>
+      <li>Post heat-treat: hardness on every batch</li>
+      <li>Final: AQL 1.0 (Normal) per ISO 2859-1</li>
+      <li>Optional: 100% sorting for critical parts</li>
+    </ul>
+
+    <h4 style="color:#f48120;margin:12px 0 6px;font-size:9pt;">Documentation We Provide</h4>
+    <ul class="chk">
+      <li>Material Test Certificate (MTC / Mill Cert)</li>
+      <li>Certificate of Conformity (CoC)</li>
+      <li>Inspection Report (per batch)</li>
+      <li>PPAP documentation (Level 1-3)</li>
+      <li>Third-party test reports (SGS/TUV/BV)</li>
+      <li>RoHS / REACH compliance statements</li>
+    </ul>
+
+    <h4 style="color:#f48120;margin:12px 0 6px;font-size:9pt;">Environmental Compliance</h4>
+    <p style="font-size:8pt;color:#50576b;">All our products can be supplied RoHS (2011/65/EU) and REACH (EC 1907/2006) compliant upon request. We maintain a database of compliant raw materials and surface treatments for EU and North American markets.</p>
+  </div>
+</div>
+
+<!-- ==================== BOLTS ==================== -->
+<div class="st">04 &nbsp; Bolts</div>
+<div class="sec">
+<table>
+  <thead><tr><th>Product</th><th>Size Range</th><th>Grade</th><th>Material</th><th>Standard</th><th>Finish Options</th><th>MOQ</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hex Head Bolt</strong></td><td>M6 – M64</td><td><span class="gd">8.8/10.9/12.9</span></td><td>Carbon/Alloy/SS</td><td>DIN 931, ISO 4014</td><td>Zinc / BO / Dacromet / HDG</td><td>1,000</td></tr>
+    <tr><td><strong>Hex Head Bolt (Full Thread)</strong></td><td>M6 – M36</td><td><span class="gd">8.8/10.9</span></td><td>Carbon/SS</td><td>DIN 933, ISO 4017</td><td>Zinc / BO / HDG</td><td>1,000</td></tr>
+    <tr><td><strong>Flange Bolt</strong></td><td>M5 – M20</td><td><span class="gd">8.8/10.9</span></td><td>Carbon/SS304</td><td>DIN 6921, GB/T 5789</td><td>Zinc / Dacromet / Chrome</td><td>1,000</td></tr>
+    <tr><td><strong>Carriage Bolt</strong></td><td>M5 – M24</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>DIN 603, GB/T 14</td><td>Zinc / HDG</td><td>500</td></tr>
+    <tr><td><strong>Socket Head Cap Screw</strong></td><td>M3 – M36</td><td><span class="gd">8.8–12.9/A2-70</span></td><td>Alloy/SS</td><td>DIN 912, ISO 4762</td><td>BO / Zinc / Passivated</td><td>1,000</td></tr>
+    <tr><td><strong>U-Bolt</strong></td><td>M6 – M30</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>DIN 3570, GB/T 2329</td><td>Zinc / HDG</td><td>200</td></tr>
+    <tr><td><strong>Double-End Stud</strong></td><td>M6 – M48</td><td><span class="gd">8.8/10.9/A2-70</span></td><td>Carbon/Alloy/SS</td><td>DIN 938-939, GB/T 897</td><td>BO / Zinc</td><td>500</td></tr>
+    <tr><td><strong>Anchor Bolt</strong></td><td>M12 – M48</td><td><span class="gd">35#/45#/Q235</span></td><td>Carbon Steel</td><td>GB/T 799</td><td>HDG / Dacromet</td><td>100</td></tr>
+    <tr><td><strong>T-Bolt</strong></td><td>M5 – M24</td><td><span class="gd">8.8/10.9</span></td><td>Carbon/SS</td><td>DIN 188, GB/T 37</td><td>BO / Zinc</td><td>1,000</td></tr>
+    <tr><td><strong>Eye Bolt (Hinged)</strong></td><td>M6 – M24</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>DIN 444, GB/T 798</td><td>Zinc / BO</td><td>500</td></tr>
+    <tr><td><strong>Lifting Eye Bolt</strong></td><td>M6 – M48</td><td><span class="gd">8.8/10.9</span></td><td>Alloy/SS</td><td>DIN 580, GB/T 825</td><td>Zinc / Passivated</td><td>200</td></tr>
+    <tr><td><strong>Weld Bolt</strong></td><td>M4 – M16</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>GB/T 902</td><td>Zinc / Copper</td><td>2,000</td></tr>
+    <tr><td><strong>Square Head Bolt</strong></td><td>M6 – M24</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>DIN 479</td><td>BO / Zinc</td><td>500</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ==================== NUTS ==================== -->
+<div class="st">05 &nbsp; Nuts</div>
+<div class="sec">
+<table>
+  <thead><tr><th>Product</th><th>Size Range</th><th>Grade</th><th>Material</th><th>Standard</th><th>Finish Options</th><th>MOQ</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hex Nut</strong></td><td>M3 – M64</td><td><span class="gd">8/10/12</span></td><td>Carbon/SS/Brass</td><td>DIN 934, ISO 4032</td><td>Zinc / BO / Passivated</td><td>2,000</td></tr>
+    <tr><td><strong>Nylon Insert Lock Nut</strong></td><td>M3 – M36</td><td><span class="gd">8/10</span></td><td>Carbon/SS</td><td>DIN 985, GB/T 889</td><td>Zinc / Passivated</td><td>1,000</td></tr>
+    <tr><td><strong>Flange Nut (Serrated)</strong></td><td>M5 – M20</td><td><span class="gd">8/10</span></td><td>Carbon/SS</td><td>DIN 6923, GB/T 6177</td><td>Zinc / Dacromet</td><td>2,000</td></tr>
+    <tr><td><strong>Cap Nut (Acorn)</strong></td><td>M4 – M24</td><td><span class="gd">6/8</span></td><td>Carbon/SS</td><td>DIN 1587, GB/T 802</td><td>Zinc / Chrome / Passivated</td><td>1,000</td></tr>
+    <tr><td><strong>Wing Nut</strong></td><td>M4 – M20</td><td><span class="gd">4/5</span></td><td>Carbon/SS/Zn Alloy</td><td>DIN 315, GB/T 62</td><td>Zinc / Chrome</td><td>1,000</td></tr>
+    <tr><td><strong>Self-Locking Nut (Metal)</strong></td><td>M4 – M30</td><td><span class="gd">8/10</span></td><td>Carbon/SS</td><td>DIN 980, GB/T 6182</td><td>Zinc / Dacromet</td><td>1,000</td></tr>
+    <tr><td><strong>Weld Nut</strong></td><td>M4 – M16</td><td><span class="gd">8</span></td><td>Carbon Steel</td><td>DIN 929, GB/T 13680</td><td>Zinc</td><td>2,000</td></tr>
+    <tr><td><strong>Square Nut</strong></td><td>M3 – M12</td><td><span class="gd">6/8</span></td><td>Carbon/SS</td><td>DIN 557, GB/T 39</td><td>Plain / Zinc</td><td>3,000</td></tr>
+    <tr><td><strong>T-Nut (Tee Nut)</strong></td><td>M4 – M16</td><td><span class="gd">6/8</span></td><td>Carbon/SS</td><td>DIN 508</td><td>Zinc / BO</td><td>2,000</td></tr>
+    <tr><td><strong>Round Nut</strong></td><td>M10 – M80</td><td><span class="gd">8</span></td><td>Carbon/45#</td><td>DIN 1804, GB/T 810</td><td>BO / Zinc</td><td>500</td></tr>
+    <tr><td><strong>Coupling Nut (Long Nut)</strong></td><td>M4 – M36</td><td><span class="gd">6/8</span></td><td>Carbon/SS</td><td>DIN 6334, GB/T 109</td><td>Zinc / BO</td><td>1,000</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ==================== SCREWS ==================== -->
+<div class="st">06 &nbsp; Screws</div>
+<div class="sec">
+<table>
+  <thead><tr><th>Product</th><th>Size Range</th><th>Grade</th><th>Material</th><th>Standard</th><th>Finish Options</th><th>MOQ</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Pan Head Self-Tapping</strong></td><td>ST2.2 – ST6.3</td><td>—</td><td>Carbon/SS410</td><td>DIN 968, GB/T 845</td><td>Zinc / Passivated</td><td>5,000</td></tr>
+    <tr><td><strong>CSK Self-Tapping</strong></td><td>ST2.2 – ST6.3</td><td>—</td><td>Carbon/SS</td><td>DIN 969, GB/T 846</td><td>Zinc / BO</td><td>5,000</td></tr>
+    <tr><td><strong>Pan Head Machine Screw</strong></td><td>M2 – M12</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>DIN 7985, GB/T 818</td><td>Zinc / Passivated</td><td>5,000</td></tr>
+    <tr><td><strong>Countersunk Machine Screw</strong></td><td>M2 – M12</td><td><span class="gd">4.8/8.8</span></td><td>Carbon/SS</td><td>DIN 965, GB/T 819</td><td>Zinc / Passivated</td><td>5,000</td></tr>
+    <tr><td><strong>Socket Set Screw</strong></td><td>M2 – M24</td><td><span class="gd">12.9/A2-70</span></td><td>Alloy/SS</td><td>DIN 913, GB/T 77</td><td>BO / Passivated</td><td>2,000</td></tr>
+    <tr><td><strong>Hex Lag Screw (Wood)</strong></td><td>M4 – M16</td><td>—</td><td>Carbon Steel</td><td>DIN 571, GB/T 102</td><td>Zinc</td><td>3,000</td></tr>
+    <tr><td><strong>Hex Flange Self-Tapping</strong></td><td>ST3.5 – ST6.3</td><td>—</td><td>Carbon/SS</td><td>GB/T 16824</td><td>Zinc / Passivated</td><td>5,000</td></tr>
+    <tr><td><strong>Shoulder Screw (Stripper Bolt)</strong></td><td>M4 – M20</td><td><span class="gd">10.9/12.9</span></td><td>Alloy/SS</td><td>DIN 6379</td><td>BO / Passivated</td><td>500</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ==================== WASHERS + RIVETS ==================== -->
+<div class="st">07 &nbsp; Washers &nbsp; | &nbsp; 08 &nbsp; Rivets</div>
+<div class="sec">
+<table>
+  <thead><tr><th>Cat</th><th>Product</th><th>Size</th><th>Material / Grade</th><th>Standard</th><th>Finish</th><th>MOQ</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Washer</strong></td><td><strong>Flat Washer</strong></td><td>M2 – M64</td><td>Carbon/SS/Copper · 200/300HV</td><td>DIN 125A, ISO 7089</td><td>Zinc / Plain</td><td>5,000</td></tr>
+    <tr><td><strong>Washer</strong></td><td><strong>Spring Lock Washer</strong></td><td>M2 – M48</td><td>65Mn / SS304</td><td>DIN 127B, GB/T 93</td><td>BO / Zinc / Passivated</td><td>5,000</td></tr>
+    <tr><td><strong>Washer</strong></td><td><strong>Serrated Lock Washer</strong></td><td>M3 – M20</td><td>65Mn / Stainless</td><td>DIN 6797, GB/T 861</td><td>BO / Passivated</td><td>3,000</td></tr>
+    <tr><td><strong>Washer</strong></td><td><strong>Belleville Spring Washer</strong></td><td>M3 – M30</td><td>50CrVA / SS301</td><td>DIN 2093, GB/T 1972</td><td>Phosphate / Passivated</td><td>2,000</td></tr>
+    <tr><td><strong>Washer</strong></td><td><strong>Heavy Flat Washer</strong></td><td>M5 – M48</td><td>45# / Alloy · 300HV</td><td>DIN 6916, GB/T 97.2</td><td>Zinc / Dacromet</td><td>2,000</td></tr>
+    <tr><td><strong>Washer</strong></td><td><strong>Sealing Washer (Bonded)</strong></td><td>M3 – M24</td><td>Cu/Al/Rubber+Metal</td><td>JB/ZQ 4403</td><td>Plain</td><td>3,000</td></tr>
+    <tr><td><strong>Rivet</strong></td><td><strong>Open-End Blind Rivet</strong></td><td>2.4 – 6.4mm</td><td>Aluminum / Steel / SS</td><td>DIN 7337, GB/T 12615</td><td>Plain / Zinc</td><td>5,000</td></tr>
+    <tr><td><strong>Rivet</strong></td><td><strong>Closed-End Blind Rivet</strong></td><td>3.2 – 6.4mm</td><td>Aluminum / Steel / SS</td><td>GB/T 12616</td><td>Plain / Zinc</td><td>5,000</td></tr>
+    <tr><td><strong>Rivet</strong></td><td><strong>Solid Rivet</strong></td><td>2 – 20mm</td><td>Steel / Copper / Aluminum</td><td>DIN 660-662, GB/T 863</td><td>Plain / Zinc</td><td>2,000</td></tr>
+    <tr><td><strong>Rivet</strong></td><td><strong>Drive Rivet</strong></td><td>3.2 – 6.4mm</td><td>Aluminum / Steel</td><td>DIN 7338</td><td>Plain / Zinc</td><td>5,000</td></tr>
+    <tr><td><strong>Rivet</strong></td><td><strong>Lockbolt (Huck Bolt)</strong></td><td>4.0 – 12.0mm</td><td>Carbon / Alloy · 10.9/12.9</td><td>GB/T 26565</td><td>Zinc / Dacromet</td><td>1,000</td></tr>
+    <tr><td><strong>Rivet</strong></td><td><strong>Peel-Type Blind Rivet</strong></td><td>3.2 – 6.4mm</td><td>Aluminum / Stainless</td><td>GB/T 12618</td><td>Plain / Passivated</td><td>5,000</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ==================== PINS ==================== -->
+<div class="st">09 &nbsp; Pins & Shafts</div>
+<div class="sec">
+<table>
+  <thead><tr><th>Product</th><th>Size Range</th><th>Material</th><th>Standard</th><th>Finish / Treatment</th><th>MOQ</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Cylindrical Dowel Pin</strong></td><td>1 – 50mm</td><td>Carbon / SS / Bearing Steel</td><td>DIN 7, ISO 2338</td><td>Hardened / Passivated</td><td>1,000</td></tr>
+    <tr><td><strong>Taper Pin</strong></td><td>2 – 40mm</td><td>Carbon / Stainless</td><td>DIN 1, GB/T 117</td><td>BO / Passivated</td><td>1,000</td></tr>
+    <tr><td><strong>Cotter Pin (Split Pin)</strong></td><td>0.8 – 20mm</td><td>Carbon / Stainless</td><td>DIN 94, GB/T 91</td><td>Zinc / Passivated</td><td>5,000</td></tr>
+    <tr><td><strong>Spring Pin (Roll / Coiled)</strong></td><td>1 – 20mm</td><td>65Mn / SS301</td><td>DIN 1481, GB/T 879</td><td>BO / Passivated</td><td>2,000</td></tr>
+    <tr><td><strong>Clevis Pin with Hole</strong></td><td>6 – 60mm</td><td>Carbon / Alloy / Stainless</td><td>Custom / DIN 1445</td><td>Zinc / Chrome / Hardened</td><td>200</td></tr>
+    <tr><td><strong>Threaded Pin</strong></td><td>M3 – M20</td><td>Carbon / Stainless</td><td>DIN 258, GB/T 881</td><td>BO / Passivated</td><td>1,000</td></tr>
+    <tr><td><strong>Parallel Key</strong></td><td>2×2 – 50×28mm</td><td>45# Steel / Stainless</td><td>GB/T 1096</td><td>BO / Plain</td><td>500</td></tr>
+    <tr><td><strong>Locating / Fixture Pin</strong></td><td>3 – 30mm</td><td>GCr15 / 40Cr</td><td>DIN 6325</td><td>Hardened / Ground / Zinc</td><td>500</td></tr>
+    <tr><td><strong>Circlip (Internal/External)</strong></td><td>5 – 100mm</td><td>65Mn / Stainless</td><td>DIN 471 / 472</td><td>BO / Passivated</td><td>3,000</td></tr>
+    <tr><td><strong>U-Clevis Pin</strong></td><td>3 – 25mm</td><td>Carbon / Stainless</td><td>DIN 1434</td><td>Zinc / Passivated</td><td>2,000</td></tr>
+    <tr><td><strong>Shaft (Custom Machined)</strong></td><td>6 – 200mm</td><td>Carbon / Alloy / SS</td><td>Per Drawing</td><td>Per Spec</td><td>100</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ==================== INDUSTRY APPLICATIONS ==================== -->
+<div class="st">10 &nbsp; Industry Applications — Where Our Fasteners Are Used</div>
+<div class="tc">
+  <div>
+    <table>
+      <thead><tr><th>Industry</th><th>Typical Products</th><th>Key Requirements</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Automotive</strong></td><td>Flange bolts, lock nuts, weld nuts</td><td>Grade 8.8–12.9, PPAP, zero PPM</td></tr>
+        <tr><td><strong>Construction & Steel</strong></td><td>Anchor bolts, heavy hex, washers</td><td>HDG, high tensile, bulk supply</td></tr>
+        <tr><td><strong>Machinery & Equipment</strong></td><td>SHCS, studs, dowel pins</td><td>Precision tolerances, alloy steel</td></tr>
+        <tr><td><strong>Electrical & Electronics</strong></td><td>Small screws, brass nuts, circlips</td><td>Conductivity, compact size</td></tr>
+        <tr><td><strong>Furniture & Hardware</strong></td><td>Wood screws, T-nuts, carriage bolts</td><td>Appearance finish, consistent color</td></tr>
+        <tr><td><strong>Marine & Offshore</strong></td><td>SS316 bolts, HDG U-bolts</td><td>Salt water corrosion resistance</td></tr>
+        <tr><td><strong>Renewable Energy</strong></td><td>Dacromet bolts, heavy washers</td><td>Long outdoor life, high strength</td></tr>
+        <tr><td><strong>DIY & Aftermarket</strong></td><td>Assortment kits, wing nuts</td><td>Retail packaging, clear labeling</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h4 style="color:#f48120;margin-bottom:8px;font-size:9pt;">Custom Fasteners</h4>
+    <p style="font-size:8pt;color:#50576b;margin-bottom:10px;">We manufacture fasteners to your exact specifications:</p>
+    <ul class="chk star">
+      <li>Non-standard dimensions & head styles</li>
+      <li>Special threads (UNF, BSW, BSF, trapezoidal)</li>
+      <li>Unusual materials (titanium, Inconel, monel)</li>
+      <li>Custom plating & coating requirements</li>
+      <li>Laser marking / branding on fastener heads</li>
+      <li>Custom packaging & labeling</li>
+      <li>Reverse engineering from samples</li>
+    </ul>
+    <p style="font-size:7.8pt;color:#939bb0;margin-top:8px;">Send us your drawing (PDF/DWG/STEP) or sample — we review and quote within 24 hours. NDA available on request.</p>
+
+    <div class="cta" style="margin-top:12px;">
+      <h3>Custom part? Send drawing to sales@zhongke-fastener.com</h3>
+      <p>We respond within 24 hours with DFM feedback and pricing.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== MATERIAL + FINISH ==================== -->
+<div class="st">11 &nbsp; Material Grade Reference &nbsp; | &nbsp; 12 &nbsp; Surface Finish Guide</div>
+<div class="tc">
+  <div>
+    <table>
+      <thead><tr><th>Material</th><th>Grade</th><th>Tensile (MPa)</th><th>Yield (MPa)</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td>Carbon Steel</td><td><span class="gd">4.8</span></td><td>420</td><td>340</td><td>General indoor, furniture</td></tr>
+        <tr><td>Carbon Steel</td><td><span class="gd">8.8</span></td><td>800</td><td>640</td><td>Automotive, machinery</td></tr>
+        <tr><td>Alloy Steel</td><td><span class="gd">10.9</span></td><td>1,040</td><td>940</td><td>Structural, high-stress</td></tr>
+        <tr><td>Alloy Steel</td><td><span class="gd">12.9</span></td><td>1,220</td><td>1,100</td><td>Critical engine joints</td></tr>
+        <tr><td>SS304 (A2)</td><td><span class="gd">A2-70</span></td><td>700</td><td>450</td><td>Food, marine, outdoor</td></tr>
+        <tr><td>SS316 (A4)</td><td><span class="gd">A4-70</span></td><td>700</td><td>450</td><td>Chemical, offshore</td></tr>
+        <tr><td>Brass C3604</td><td><span class="gd">C3604</span></td><td>350</td><td>200</td><td>Electrical, decorative</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <table>
+      <thead><tr><th>Finish</th><th>Corrosion</th><th>Appearance</th><th>Application</th></tr></thead>
+      <tbody>
+        <tr><td>Zinc (Clear)</td><td>Moderate</td><td>Silver, bright</td><td>Indoor general</td></tr>
+        <tr><td>Zinc (Yellow)</td><td>Good</td><td>Gold-yellow</td><td>Auto under-hood</td></tr>
+        <tr><td>Hot-Dip Galvanized</td><td><span class="gr">Excellent</span></td><td>Matte gray</td><td>Outdoor, marine</td></tr>
+        <tr><td>Dacromet / Geomet</td><td><span class="gr">Excellent</span></td><td>Silver-gray matte</td><td>Auto, wind turbines</td></tr>
+        <tr><td>Black Oxide</td><td>Low (+oil)</td><td>Black, smooth</td><td>Tools, indoor</td></tr>
+        <tr><td>Phosphate</td><td>Low–Mod.</td><td>Dark gray matte</td><td>Pre-paint base</td></tr>
+        <tr><td>Nickel / Chrome</td><td>Very Good</td><td>Bright, decorative</td><td>Furniture, visible</td></tr>
+        <tr><td>Passivation</td><td><span class="gr">Excellent</span></td><td>Natural SS</td><td>Stainless steel</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== PACKAGING ==================== -->
+<div class="st">13 &nbsp; Packaging, Shipping & Payment</div>
+<div class="tc">
+  <div>
+    <h4 style="color:#f48120;margin-bottom:6px;font-size:9pt;">Packaging Options</h4>
+    <table>
+      <thead><tr><th>Pack Type</th><th>Qty Range</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Small Carton</td><td>500–2,000 pcs</td><td>5–15 kg</td></tr>
+        <tr><td>Standard Carton</td><td>1,000–10,000</td><td>15–25 kg</td></tr>
+        <tr><td>EU Pallet (1200×800)</td><td>24–48 cartons</td><td>500–800 kg</td></tr>
+        <tr><td>US Pallet (48×40")</td><td>24–48 cartons</td><td>500–800 kg</td></tr>
+        <tr><td>Bulk Bag (Jumbo)</td><td>Custom</td><td>≤1,000 kg</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:7.5pt;color:#50576b;margin-top:6px;">All cartons use export-grade corrugated board. Inner bags are sealed with desiccant for ocean freight. Every package is labeled with SKU, quantity, batch number, and production date.</p>
+  </div>
+  <div>
+    <h4 style="color:#f48120;margin-bottom:6px;font-size:9pt;">Shipping Methods</h4>
+    <table>
+      <thead><tr><th>Method</th><th>Transit</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td>Sea FCL</td><td>25–35 days</td><td>Orders > 15 CBM</td></tr>
+        <tr><td>Sea LCL</td><td>30–40 days</td><td>Medium orders</td></tr>
+        <tr><td>Air Freight</td><td>5–8 days</td><td>Urgent / small</td></tr>
+        <tr><td>Express (DHL/FedEx)</td><td>3–5 days</td><td>Samples & < 50 kg</td></tr>
+      </tbody>
+    </table>
+    <h4 style="color:#f48120;margin:10px 0 6px;font-size:9pt;">Payment Terms</h4>
+    <ul class="chk">
+      <li><strong>T/T:</strong> 30% deposit, 70% before shipment</li>
+      <li><strong>L/C at sight:</strong> For orders above $50,000</li>
+      <li><strong>PayPal / Western Union:</strong> For samples & small orders</li>
+      <li>Flexible terms for established relationships</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ==================== FAQ ==================== -->
+<div class="st">14 &nbsp; Frequently Asked Questions</div>
+<div class="tc">
+  <div>
+    <div class="faq-q">Q: What is your minimum order quantity?</div>
+    <div class="faq-a">Standard parts start at 500–1,000 pcs per size. Custom parts typically 200–500 pcs. We're flexible on trial orders for new customers — contact us with your requirements.</div>
+
+    <div class="faq-q">Q: Do you provide free samples?</div>
+    <div class="faq-a">Yes — free samples of standard products (you cover shipping). For custom parts, a small tooling fee applies, refundable on your first production order.</div>
+
+    <div class="faq-q">Q: How long does shipping take?</div>
+    <div class="faq-a">Standard parts ship in 5–7 working days; custom parts in 15–25 days. Sea freight adds 25–40 days depending on destination. Air freight is 5–8 days. Express (DHL/UPS/FedEx) is 3–5 days.</div>
+
+    <div class="faq-q">Q: Can you match my existing supplier's price?</div>
+    <div class="faq-a">We're competitive on quality-for-price. Send us your current spec and target price — we'll tell you honestly what we can do. Often we can match or beat pricing while providing better documentation and service.</div>
+
+    <div class="faq-q">Q: What if parts arrive defective?</div>
+    <div class="faq-a">We ship with full inspection reports and MTCs. In the rare case of a quality issue, we replace or refund — no questions asked. Our OTIF (on-time, in-full) rate is 98.5%.</div>
+  </div>
+  <div>
+    <div class="faq-q">Q: Do you offer OEM / private labeling?</div>
+    <div class="faq-a">Yes — custom packaging, branded labels, laser marking on fastener heads, and custom carton printing are all available.</div>
+
+    <div class="faq-q">Q: What surface treatments are available?</div>
+    <div class="faq-a">Zinc (clear/blue/yellow/black), Hot-dip galvanized, Dacromet/Geomet, Black oxide, Phosphate, Nickel, Chrome, Passivation (stainless), and more. Tell us your operating environment and we'll recommend the right finish.</div>
+
+    <div class="faq-q">Q: Are you RoHS / REACH compliant?</div>
+    <div class="faq-a">Yes — all products can be supplied RoHS (2011/65/EU) and REACH compliant upon request. We maintain a database of compliant materials and can provide compliance statements with your order.</div>
+
+    <div class="faq-q">Q: How do I get a quote?</div>
+    <div class="faq-a">Email sales@zhongke-fastener.com with: (1) product name, (2) size/spec, (3) material & grade, (4) surface finish, (5) quantity. We'll reply with pricing, lead time, and shipping options within 24 hours.</div>
+
+    <div class="faq-q">Q: Can I visit your factory?</div>
+    <div class="faq-a">Absolutely. We're located in Dongtai, Jiangsu — about 3 hours from Shanghai. We welcome factory visits and audits. Please schedule in advance so we can arrange transportation and prepare for your visit.</div>
+  </div>
+</div>
+
+<!-- ==================== CONTACT PAGE ==================== -->
+<div class="cp">
+  <h2>Let's Build Something Together</h2>
+  <p class="cpsub">From a single sample to a full container — we're ready when you are.</p>
+
+  <div class="bigmail">sales@zhongke-fastener.com</div>
+
+  <div class="ir">
+    <div class="ib">
+      <h4>Contact Person</h4>
+      <p>Tailuo — Sales Manager<br>+86 138-0722-1298<br>WeChat / WhatsApp available<br>English & Chinese</p>
+    </div>
+    <div class="ib">
+      <h4>Factory</h4>
+      <p>No.18 Kaizhuang, Qindong Town<br>Dongtai City, Jiangsu, China<br>3 hours from Shanghai<br>Visits welcome — please schedule</p>
+    </div>
+    <div class="ib">
+      <h4>Quick Reference</h4>
+      <p>
+        Lead time: 5–25 working days<br>
+        MOQ: 200–5,000 pcs (by type)<br>
+        Payment: T/T · L/C · PayPal<br>
+        Certificates: MTC · PPAP · SGS · CE
+      </p>
+    </div>
+  </div>
+
+  <div class="cb" style="margin-top:20px;">
+    <span class="cbb">ISO 9001:2015</span>
+    <span class="cbb">CE Certified</span>
+    <span class="cbb">RoHS Compliant</span>
+    <span class="cbb">REACH Compliant</span>
+    <span class="cbb">ANSI / ASTM</span>
+    <span class="cbb">DIN Standard</span>
+    <span class="cbb">BS Standard</span>
+    <span class="cbb">JIS Standard</span>
+    <span class="cbb">MTC Included</span>
+    <span class="cbb">PPAP Available</span>
+    <span class="cbb">SGS / TUV / BV</span>
+    <span class="cbb">FCL & LCL Worldwide</span>
+  </div>
+
+  <p style="text-align:center;margin-top:20px;font-size:7pt;color:rgba(255,255,255,0.25);">ZhongKe Fastener Co., Ltd. · www.zhongke-fastener.com · © 2025 All rights reserved · catalog-2025-v2</p>
+</div>
+
+</body>
+</html>
