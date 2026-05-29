@@ -451,6 +451,89 @@ h3 { font-size: 1.2rem; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================
+/* ============================================
+   TOP TRUST BAR (NEW)
+   ============================================ */
+.trust-bar {
+  background: var(--blue-dark); color: rgba(255,255,255,0.7); font-size: 0.78rem;
+  padding: 0.45rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.trust-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.trust-items { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.trust-items span { display: flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
+.trust-items svg { color: var(--orange); flex-shrink: 0; }
+.trust-contact { display: flex; gap: 1.2rem; }
+.trust-contact a { color: rgba(255,255,255,0.6); transition: color var(--transition); }
+.trust-contact a:hover { color: var(--orange); }
+
+/* ============================================
+   NAV TWEAK
+   ============================================ */
+.navbar { top: 32px; }
+.nav-logo span { font-weight: 400; color: var(--orange-light); }
+
+/* ============================================
+   INDUSTRY APPLICATIONS (NEW)
+   ============================================ */
+.applications { padding: 6rem 0; background: var(--white); }
+.app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.app-card {
+  background: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem; text-align: center; transition: all var(--transition); cursor: default;
+}
+.app-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--orange); }
+.app-card .app-icon { display: flex; justify-content: center; margin-bottom: 1rem; }
+.app-card .app-icon svg { width: 48px; height: 48px; color: var(--orange); }
+.app-card h4 { font-size: 1rem; margin-bottom: 0.4rem; }
+.app-card p { font-size: 0.84rem; color: var(--gray-500); line-height: 1.6; }
+
+/* ============================================
+   TECHNICAL RESOURCES (NEW)
+   ============================================ */
+.tech-resources { padding: 6rem 0; background: var(--gray-50); }
+.resource-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.resource-card {
+  background: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-lg);
+  padding: 1.8rem 1.5rem; transition: all var(--transition); display: flex; flex-direction: column;
+  cursor: pointer; text-decoration: none; color: inherit;
+}
+.resource-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--orange); }
+.resource-card .res-icon { margin-bottom: 1rem; }
+.resource-card .res-icon svg { width: 44px; height: 44px; color: var(--orange); }
+.resource-card h4 { font-size: 0.95rem; margin-bottom: 0.4rem; }
+.resource-card p { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 1rem; flex: 1; line-height: 1.6; }
+.res-tag {
+  display: inline-block; background: var(--gray-50); color: var(--orange); padding: 0.25rem 0.7rem;
+  border-radius: 20px; font-size: 0.75rem; font-weight: 700; border: 1.5px solid rgba(244,129,32,0.2);
+  align-self: flex-start;
+}
+
+/* ============================================
+   IMPROVED CONTACT CARDS (NEW)
+   ============================================ */
+.contact-card {
+  display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem;
+  border: 1px solid var(--gray-100); border-radius: var(--radius);
+  margin-bottom: 0.75rem; background: var(--white); transition: all var(--transition);
+}
+.contact-card:hover { border-color: var(--gray-200); box-shadow: var(--shadow-sm); }
+.contact-card h3 { font-size: 0.95rem; margin-bottom: 0.15rem; }
+.contact-card p { color: var(--gray-500); font-size: 0.84rem; }
+.contact-card .contact-val { font-weight: 700; color: var(--blue-dark); font-size: 0.95rem; }
+.contact-icon-big {
+  flex-shrink: 0; width: 48px; height: 48px; background: rgba(244,129,32,0.06);
+  border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid rgba(244,129,32,0.12);
+}
+.contact-icon-big svg { width: 24px; height: 24px; color: var(--orange); }
+
+/* ============================================
+   FOOTER LOGO
+   ============================================ */
+.footer-logo { display: flex; align-items: center; gap: 0.6rem; }
+.footer-logo span { color: var(--white); font-size: 1.1rem; font-weight: 700; }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 1024px) {
@@ -471,6 +554,34 @@ h3 { font-size: 1.2rem; }
   .about-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; }
   .timeline::before { left: 20px; }
+  .app-grid { grid-template-columns: repeat(2, 1fr); }
+  .resource-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-bar .container { flex-direction: column; }
+  .showcase-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .trust-bar { display: none; }
+  .navbar { top: 0; }
+  .nav-links { display: none; }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--blue-dark); padding: 1.5rem; gap: 1.2rem; border-bottom: 2px solid var(--orange); }
+  .mobile-toggle { display: flex; }
+  .product-categories { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { grid-template-columns: 1fr; gap: 1.5rem; }
+  .process-steps::before { display: none; }
+  .cap-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: column; gap: 1rem; align-items: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .product-filter-bar { flex-direction: column; align-items: stretch; }
+  .product-search { width: 100%; }
+  .cert-strip { gap: 2rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .catalog-features { flex-direction: column; align-items: center; gap: 1rem; }
+  .app-grid { grid-template-columns: 1fr; }
+  .resource-grid { grid-template-columns: 1fr; }
+  .showcase-grid { grid-template-columns: 1fr; }
+  .showcase-img { height: 200px; }
+  .trust-items { justify-content: center; }
 }
 
 /* ============================================
