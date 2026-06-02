@@ -173,7 +173,7 @@ h3 { font-size: 1.2rem; }
    SECTION: Products Preview
    ============================================ */
 .products { padding: 6rem 0; background: var(--gray-50); }
-.product-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin-bottom: 3rem; }
+.product-categories { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0.8rem; margin-bottom: 3rem; }
 .cat-card {
   background: var(--white); border-radius: var(--radius-lg); padding: 1.8rem 0.8rem;
   text-align: center; box-shadow: var(--shadow-sm); border: 2px solid transparent;

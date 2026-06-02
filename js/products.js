@@ -9,7 +9,9 @@ var catIcons = {
   screws: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 40V8l16 10v12L24 40z"/><path d="M8 18l16-10v32L8 30V18z"/></svg>',
   washers: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="6"/><path d="M14 24h20"/></svg>',
   rivets: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="8" width="12" height="32" rx="3"/><circle cx="24" cy="14" r="4"/></svg>',
-  pins: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="10" r="6"/><path d="M24 16v22"/><path d="M14 22h20"/></svg>'
+  pins: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="10" r="6"/><path d="M24 16v22"/><path d="M14 22h20"/></svg>',
+  studs: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="10" y="16" width="28" height="16" rx="4"/><line x1="18" y1="16" x2="18" y2="32"/><line x1="22" y1="16" x2="22" y2="32"/><line x1="26" y1="16" x2="26" y2="32"/><line x1="30" y1="16" x2="30" y2="32"/></svg>',
+  kits: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="12" width="32" height="24" rx="3"/><path d="M20 12v24"/><circle cx="16" cy="22" r="3"/><circle cx="16" cy="30" r="3"/><circle cx="32" cy="22" r="3"/><circle cx="32" cy="30" r="3"/></svg>'
 };
 
 // Metallic gradients for product cards
@@ -90,9 +92,6 @@ var allProducts = [
   { cat: 'rivets', name: 'Tubular Rivet', spec: '2 – 8mm', grade: '—', material: 'Brass / Copper / Al', standard: 'DIN 7340', surface: 'Plain / Nickel', moq: '5,000', delivery: '7 days' },
   { cat: 'rivets', name: 'Rivet Nut (Threaded Insert)', spec: 'M3 – M12', grade: '—', material: 'Steel / Stainless / Al', standard: 'GB/T 17880', surface: 'Zinc / Passivated', moq: '3,000', delivery: '5 days' },
   // Threaded Rod
-  { cat: 'pins', name: 'Threaded Rod (All Thread)', spec: 'M3 – M30 × 1m/3m', grade: '4.8 / 8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 975/976', surface: 'Zinc / HDG / Plain', moq: '200', delivery: '5 days' },
-  { cat: 'pins', name: 'Double End Stud (Tap End)', spec: 'M4 – M36', grade: '8.8 / 10.9 / A2-70', material: 'Carbon / Alloy / Stainless', standard: 'DIN 939', surface: 'Black Oxide / Zinc', moq: '500', delivery: '7 days' },
-  // Pins
   { cat: 'pins', name: 'Cylindrical Dowel Pin', spec: '1 – 50mm', grade: '—', material: 'Carbon / Stainless / Bearing Steel', standard: 'DIN 7, ISO 2338', surface: 'Hardened / Passivated', moq: '1,000', delivery: '5 days' },
   { cat: 'pins', name: 'Taper Pin', spec: '2 – 40mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1', surface: 'Black Oxide', moq: '1,000', delivery: '5 days' },
   { cat: 'pins', name: 'Cotter Pin (Split)', spec: '0.8 – 20mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 94', surface: 'Zinc / Passivated', moq: '5,000', delivery: '3 days' },
@@ -107,7 +106,27 @@ var allProducts = [
   { cat: 'pins', name: 'Internal Thread Dowel', spec: '5 – 25mm', grade: '—', material: 'Carbon / Bearing Steel', standard: 'DIN 7979', surface: 'Hardened / Passivated', moq: '1,000', delivery: '7 days' },
   { cat: 'pins', name: 'Headless Clevis Pin', spec: '5 – 30mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1433', surface: 'Zinc / Plain', moq: '1,000', delivery: '7 days' },
   { cat: 'pins', name: 'Taper Spring Pin', spec: '2 – 12mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 1481', surface: 'Black Oxide', moq: '3,000', delivery: '5 days' },
-  { cat: 'pins', name: 'Expansion Plug / Wall Anchor', spec: 'M5 – M20', grade: '4.8 / 5.8', material: 'Carbon / Stainless', standard: 'GB/T 22795', surface: 'Zinc / HDG', moq: '2,000', delivery: '5 days' }
+  // Studs & Threaded Rods
+  { cat: 'studs', name: 'Threaded Rod (All Thread)', spec: 'M3 – M30 × 1m/3m', grade: '4.8 / 8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 975/976', surface: 'Zinc / HDG / Plain', moq: '200', delivery: '5 days' },
+  { cat: 'studs', name: 'Double-End Stud (Tap End)', spec: 'M4 – M36', grade: '8.8 / 10.9 / A2-70', material: 'Carbon / Alloy / Stainless', standard: 'DIN 939', surface: 'Black Oxide / Zinc', moq: '500', delivery: '7 days' },
+  { cat: 'studs', name: 'Double-End Stud (Equal)', spec: 'M4 – M36', grade: '8.8 / 10.9 / A2-70', material: 'Carbon / Alloy / SS', standard: 'DIN 938', surface: 'Zinc / Dacromet', moq: '500', delivery: '7 days' },
+  { cat: 'studs', name: 'Left-Right Thread Stud', spec: 'M6 – M20', grade: '8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 2510', surface: 'Zinc / Plain', moq: '200', delivery: '10 days' },
+  { cat: 'studs', name: 'Weld Stud', spec: 'M4 – M16', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 32501', surface: 'Zinc / Copper', moq: '1,000', delivery: '5 days' },
+  { cat: 'studs', name: 'Wedge Anchor', spec: 'M6 – M24', grade: '5.8 / 8.8', material: 'Carbon / Stainless', standard: 'JB/ZQ 4763', surface: 'Zinc / HDG', moq: '1,000', delivery: '5 days' },
+  { cat: 'studs', name: 'Drop-in Anchor', spec: 'M6 – M20', grade: '—', material: 'Carbon / Stainless', standard: 'Expansion Type', surface: 'Zinc / Plain', moq: '1,000', delivery: '5 days' },
+  { cat: 'studs', name: 'Hex Standoff Spacer', spec: 'M3 – M10 × 5-50mm', grade: '—', material: 'Brass / Stainless / Nylon', standard: 'Custom', surface: 'Nickel / Plain', moq: '2,000', delivery: '7 days' },
+  { cat: 'studs', name: 'Sleeve Anchor', spec: 'M6 – M20', grade: '5.8 / 8.8', material: 'Carbon / Stainless', standard: 'Through Bolt Type', surface: 'Zinc / HDG', moq: '1,000', delivery: '5 days' },
+  { cat: 'studs', name: 'Expansion Plug / Wall Anchor', spec: 'M5 – M20', grade: '4.8 / 5.8', material: 'Carbon / Stainless', standard: 'GB/T 22795', surface: 'Zinc / HDG', moq: '2,000', delivery: '5 days' },
+  // Kits & Sets
+  { cat: 'kits', name: 'Hex Nut + Flat Washer Set', spec: 'M3 – M12 | 50-300 pcs', grade: 'A2 / 8', material: 'Stainless / Carbon', standard: 'DIN 934+125', surface: 'Zinc / Passivated', moq: '500', delivery: '5 days' },
+  { cat: 'kits', name: 'Bolt + Nut + Washer Kit', spec: 'M4 – M12 | 80-400 pcs', grade: '8.8 / A2', material: 'Carbon / Stainless', standard: 'DIN 931+934+125', surface: 'Zinc / Dacromet', moq: '300', delivery: '7 days' },
+  { cat: 'kits', name: 'Flat Washer Assortment Box', spec: 'M3 – M16 | 6 sizes | 150 pcs', grade: '200HV / A2', material: 'Carbon / Stainless', standard: 'DIN 125A', surface: 'Zinc / Passivated', moq: '500', delivery: '5 days' },
+  { cat: 'kits', name: 'Hex Nut Assortment Box', spec: 'M3 – M12 | 8 sizes | 200 pcs', grade: '8 / A2', material: 'Carbon / Stainless', standard: 'DIN 934', surface: 'Zinc / Passivated', moq: '500', delivery: '5 days' },
+  { cat: 'kits', name: 'Self-Tapping Screw Kit', spec: 'ST3.5-ST6.3 | 5 sizes | 200 pcs', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 7981/7982', surface: 'Zinc / Passivated', moq: '500', delivery: '5 days' },
+  { cat: 'kits', name: 'Nylon Lock Nut Kit', spec: 'M4 – M12 | 6 sizes | 120 pcs', grade: '8 / A2', material: 'Carbon / Stainless', standard: 'DIN 985', surface: 'Zinc / Passivated', moq: '300', delivery: '7 days' },
+  { cat: 'kits', name: 'Spring Lock Washer Set', spec: 'M3 – M20 | 10 sizes | 300 pcs', grade: '—', material: '65Mn / SS304', standard: 'DIN 127', surface: 'Black Oxide', moq: '300', delivery: '5 days' },
+  { cat: 'kits', name: 'Retaining Ring Circlip Set', spec: 'Φ5-Φ50mm | 15 sizes | 300 pcs', grade: '—', material: '65Mn / Stainless', standard: 'DIN 471+472', surface: 'Black Oxide', moq: '300', delivery: '5 days' },
+  { cat: 'kits', name: 'DIY Home Hardware Set', spec: '100-500 pcs mix', grade: '4.8 / A2', material: 'Carbon / Stainless', standard: 'Assorted', surface: 'Zinc / Plain', moq: '300', delivery: '7 days' }
 ];
 
 var currentFilter = 'all';

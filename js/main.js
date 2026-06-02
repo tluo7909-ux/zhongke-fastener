@@ -224,9 +224,37 @@ var productData = {
       { name: 'Circlip', spec: '5 – 100mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 471-472', surface: 'Black Oxide' },
       { name: 'U-Clevis Pin', spec: '3 – 25mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1434', surface: 'Zinc / Passivated' },
       { name: 'Clevis Pin with Hole', spec: '6 – 50mm', grade: '—', material: 'Carbon / Alloy / SS', standard: 'DIN 1444', surface: 'Zinc / Chrome' },
-      { name: 'Threaded Rod (All Thread)', spec: 'M3 – M30 × 1m/3m', grade: '4.8 / 8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 975/976', surface: 'Zinc / HDG / Plain' },
-      { name: 'Expansion Plug/Wall Anchor', spec: 'M5 – M20', grade: '4.8 / 5.8', material: 'Carbon / Stainless', standard: 'GB/T 22795', surface: 'Zinc / HDG' },
       { name: 'Taper Spring Pin', spec: '2 – 12mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 1481', surface: 'Black Oxide' }
+    ]
+  },
+  studs: {
+    title: 'Studs & Threaded Rods — Popular Specifications',
+    items: [
+      { name: 'Threaded Rod (All Thread)', spec: 'M3 – M30 × 1m/3m', grade: '4.8 / 8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 975/976', surface: 'Zinc / HDG / Plain' },
+      { name: 'Double-End Stud (Tap End)', spec: 'M4 – M36', grade: '8.8 / 10.9 / A2-70', material: 'Carbon / Alloy / Stainless', standard: 'DIN 939', surface: 'Black Oxide / Zinc' },
+      { name: 'Double-End Stud (Equal)', spec: 'M4 – M36', grade: '8.8 / 10.9 / A2-70', material: 'Carbon / Alloy / SS', standard: 'DIN 938', surface: 'Zinc / Dacromet' },
+      { name: 'Left-Right Thread Stud', spec: 'M6 – M20', grade: '8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 2510', surface: 'Zinc / Plain' },
+      { name: 'Weld Stud', spec: 'M4 – M16', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 32501', surface: 'Zinc / Copper' },
+      { name: 'Expansion Bolt / Wall Anchor', spec: 'M5 – M20', grade: '4.8 / 5.8', material: 'Carbon / Stainless', standard: 'GB/T 22795', surface: 'Zinc / HDG' },
+      { name: 'Wedge Anchor', spec: 'M6 – M24', grade: '5.8 / 8.8', material: 'Carbon / Stainless', standard: 'JB/ZQ 4763', surface: 'Zinc / HDG' },
+      { name: 'Drop-in Anchor', spec: 'M6 – M20', grade: '—', material: 'Carbon / Stainless', standard: 'Expansion Type', surface: 'Zinc / Plain' },
+      { name: 'Hex Standoff / Spacer', spec: 'M3 – M10 × 5-50mm', grade: '—', material: 'Brass / Stainless / Nylon', standard: 'Custom', surface: 'Nickel / Plain' },
+      { name: 'Sleeve Anchor', spec: 'M6 – M20', grade: '5.8 / 8.8', material: 'Carbon / Stainless', standard: 'Through Bolt Type', surface: 'Zinc / HDG' }
+    ]
+  },
+  kits: {
+    title: 'Kits & Assortment Sets — Popular Specifications',
+    items: [
+      { name: 'Hex Nut + Flat Washer Set', spec: 'M3 – M12 | 50-300 pcs', grade: 'A2 / 8', material: 'Stainless / Carbon', standard: 'DIN 934+125', surface: 'Zinc / Passivated' },
+      { name: 'Bolt + Nut + Washer Kit', spec: 'M4 – M12 | 80-400 pcs', grade: '8.8 / A2', material: 'Carbon / Stainless', standard: 'DIN 931+934+125', surface: 'Zinc / Dacromet' },
+      { name: 'Flat Washer Assortment Box', spec: 'M3 – M16 | 6 sizes | 150 pcs', grade: '200HV / A2', material: 'Carbon / Stainless', standard: 'DIN 125A', surface: 'Zinc / Passivated' },
+      { name: 'Hex Nut Assortment Box', spec: 'M3 – M12 | 8 sizes | 200 pcs', grade: '8 / A2', material: 'Carbon / Stainless', standard: 'DIN 934', surface: 'Zinc / Passivated' },
+      { name: 'Self-Tapping Screw Kit', spec: 'ST3.5-ST6.3 | 5 sizes | 200 pcs', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 7981/7982', surface: 'Zinc / Passivated' },
+      { name: 'Nylon Lock Nut Kit', spec: 'M4 – M12 | 6 sizes | 120 pcs', grade: '8 / A2', material: 'Carbon / Stainless', standard: 'DIN 985', surface: 'Zinc / Passivated' },
+      { name: 'Spring Lock Washer Set', spec: 'M3 – M20 | 10 sizes | 300 pcs', grade: '—', material: '65Mn / SS304', standard: 'DIN 127', surface: 'Black Oxide' },
+      { name: 'O-Ring & Seal Kit', spec: 'Assorted | NBR / Silicone / EPDM', grade: '—', material: 'Rubber / Silicone', standard: 'Metric / Inch', surface: '—' },
+      { name: 'DIY Home Hardware Set', spec: '100-500 pcs mix', grade: '4.8 / A2', material: 'Carbon / Stainless', standard: 'Assorted', surface: 'Zinc / Plain' },
+      { name: 'Retaining Ring Circlip Set', spec: 'Φ5-Φ50mm | 15 sizes | 300 pcs', grade: '—', material: '65Mn / Stainless', standard: 'DIN 471+472', surface: 'Black Oxide' }
     ]
   }
 };
