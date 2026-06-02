@@ -36,11 +36,11 @@ var allProducts = [
   { cat: 'bolts', name: 'Hex Bolt Fine Thread', spec: 'M8 – M48', grade: '8.8 / 10.9 / 12.9', material: 'Carbon / Alloy / Stainless', standard: 'DIN 961', surface: 'Zinc / Dacromet / HDG', moq: '500', delivery: '10 days' },
   // Nuts
   { cat: 'nuts', name: 'Hex Nut', spec: 'M3 – M64', grade: '8 / 10 / 12', material: 'Carbon / Stainless / Brass', standard: 'DIN 934, ISO 4032', surface: 'Zinc / Black Oxide', moq: '2,000', delivery: '5 days' },
-  { cat: 'nuts', name: 'Nylon Insert Lock Nut', spec: 'M3 – M36', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 985', surface: 'Zinc / Passivated', moq: '1,000', delivery: '7 days' },
-  { cat: 'nuts', name: 'Flange Nut', spec: 'M5 – M20', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 6923', surface: 'Zinc / Dacromet', moq: '2,000', delivery: '5 days' },
-  { cat: 'nuts', name: 'Cap Nut (Acorn)', spec: 'M4 – M24', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 1587', surface: 'Zinc / Chrome', moq: '1,000', delivery: '7 days' },
+  { cat: 'nuts', name: 'Nylon Insert Lock Nut', spec: 'M3 – M36', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 985', surface: 'Zinc / Passivated', moq: '1,000', delivery: '7 days', img: 'images/lock-nut-304.jpg' },
+  { cat: 'nuts', name: 'Flange Nut', spec: 'M5 – M20', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 6923', surface: 'Zinc / Dacromet', moq: '2,000', delivery: '5 days', img: 'images/flange-nut-304.jpg' },
+  { cat: 'nuts', name: 'Cap Nut (Acorn)', spec: 'M4 – M24', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 1587', surface: 'Zinc / Chrome', moq: '1,000', delivery: '7 days', img: 'images/cap-nut-304.jpg' },
   { cat: 'nuts', name: 'Wing Nut', spec: 'M4 – M20', grade: '4 / 5', material: 'Carbon / Stainless / Zn Alloy', standard: 'DIN 315', surface: 'Zinc / Chrome', moq: '1,000', delivery: '5 days' },
-  { cat: 'nuts', name: 'Self-Locking Nut', spec: 'M4 – M30', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 980', surface: 'Zinc / Dacromet', moq: '1,000', delivery: '7 days' },
+  { cat: 'nuts', name: 'Self-Locking Nut', spec: 'M4 – M30', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 980', surface: 'Zinc / Dacromet', moq: '1,000', delivery: '7 days', img: 'images/lock-nut-304.jpg' },
   { cat: 'nuts', name: 'Weld Nut', spec: 'M4 – M16', grade: '8', material: 'Carbon Steel', standard: 'DIN 929', surface: 'Zinc', moq: '2,000', delivery: '5 days' },
   { cat: 'nuts', name: 'Square Nut', spec: 'M3 – M12', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 557', surface: 'Plain / Zinc', moq: '3,000', delivery: '5 days' },
   { cat: 'nuts', name: 'T-Nut', spec: 'M4 – M16', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 508', surface: 'Zinc / Black Oxide', moq: '2,000', delivery: '7 days' },
@@ -52,10 +52,10 @@ var allProducts = [
   { cat: 'nuts', name: 'Thin Hex Nut (Jam Nut)', spec: 'M3 – M36', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 439', surface: 'Zinc / Passivated', moq: '2,000', delivery: '5 days' },
   { cat: 'nuts', name: 'Hex Long Nut', spec: 'M4 – M20', grade: '8', material: 'Carbon / Stainless', standard: 'DIN 6334', surface: 'Zinc / Passivated', moq: '1,000', delivery: '7 days' },
   // Screws
-  { cat: 'screws', name: 'Pan Head Self-Tapping', spec: 'ST2.2 – ST6.3', grade: '—', material: 'Carbon Steel / SS410', standard: 'GB/T 845, DIN 968', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
-  { cat: 'screws', name: 'CSK Self-Tapping Screw', spec: 'ST2.2 – ST6.3', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 969', surface: 'Zinc / Black Oxide', moq: '5,000', delivery: '5 days' },
-  { cat: 'screws', name: 'Pan Head Machine Screw', spec: 'M2 – M12', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 7985', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
-  { cat: 'screws', name: 'Countersunk Machine Screw', spec: 'M2 – M12', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 965', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
+  { cat: 'screws', name: 'Pan Head Self-Tapping', spec: 'ST2.2 – ST6.3', grade: '—', material: 'Carbon Steel / SS410', standard: 'GB/T 845, DIN 968', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days', img: 'images/pan-self-tap.jpg' },
+  { cat: 'screws', name: 'CSK Self-Tapping Screw', spec: 'ST2.2 – ST6.3', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 969', surface: 'Zinc / Black Oxide', moq: '5,000', delivery: '5 days', img: 'images/csk-self-tap.jpg' },
+  { cat: 'screws', name: 'Pan Head Machine Screw', spec: 'M2 – M12', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 7985', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days', img: 'images/pan-machine.jpg' },
+  { cat: 'screws', name: 'Countersunk Machine Screw', spec: 'M2 – M12', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 965', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days', img: 'images/csk-machine-304.jpg' },
   { cat: 'screws', name: 'Socket Set Screw', spec: 'M2 – M24', grade: '12.9 / A2-70', material: 'Alloy / Stainless', standard: 'DIN 913', surface: 'Black Oxide / Passivated', moq: '2,000', delivery: '7 days' },
   { cat: 'screws', name: 'Hex Wood Screw', spec: 'M4 – M16', grade: '—', material: 'Carbon Steel', standard: 'DIN 571', surface: 'Zinc', moq: '3,000', delivery: '5 days' },
   { cat: 'screws', name: 'Hex Flange Self-Tap', spec: 'ST3.5 – ST6.3', grade: '—', material: 'Carbon / Stainless', standard: 'GB/T 16824', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
@@ -145,9 +145,15 @@ function renderProductCards(products) {
     var icon = catIcons[p.cat] || '';
     var mc = getMetalClass(i);
     html += '<div class="prod-detail-card">';
-    html += '<div class="prod-thumb ' + mc + '" style="position:relative;overflow:hidden;border-radius:var(--radius);">';
-    html += '<div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.4) 100%);"></div>';
-    html += '<div style="position:relative;z-index:1;">' + icon + '</div>';
+    // Check if product has a real image
+    if (p.img) {
+      html += '<div class="prod-thumb" style="position:relative;overflow:hidden;border-radius:var(--radius);background:var(--gray-100);">';
+      html += '<img src="' + p.img + '" alt="' + p.name + '" style="width:100%;height:100%;object-fit:contain;padding:8px;" loading="lazy">';
+    } else {
+      html += '<div class="prod-thumb ' + mc + '" style="position:relative;overflow:hidden;border-radius:var(--radius);">';
+      html += '<div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.4) 100%);"></div>';
+      html += '<div style="position:relative;z-index:1;">' + icon + '</div>';
+    }
     html += '</div>';
     html += '<div class="prod-info">';
     html += '<h3>' + p.name + '</h3>';
