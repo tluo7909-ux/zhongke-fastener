@@ -30,6 +30,8 @@ var allProducts = [
   { cat: 'bolts', name: 'Lifting Eye Bolt', spec: 'M6 – M48', grade: '8.8 / 10.9', material: 'Alloy / Stainless', standard: 'DIN 580', surface: 'Zinc / Passivated', moq: '200', delivery: '7 days' },
   { cat: 'bolts', name: 'Weld Bolt', spec: 'M4 – M16', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'GB/T 902', surface: 'Zinc / Copper Plated', moq: '2,000', delivery: '5 days' },
   { cat: 'bolts', name: 'Low Head Socket Screw', spec: 'M3 – M16', grade: '8.8 / 10.9 / A2-70', material: 'Alloy / Stainless', standard: 'DIN 7984', surface: 'Black Oxide / Passivated', moq: '1,000', delivery: '7 days' },
+  { cat: 'bolts', name: 'Square Head Bolt', spec: 'M5 – M24', grade: '8.8 / 10.9', material: 'Carbon / Stainless', standard: 'DIN 478', surface: 'Zinc / Black Oxide', moq: '500', delivery: '7 days' },
+  { cat: 'bolts', name: 'Hex Bolt Fine Thread', spec: 'M8 – M48', grade: '8.8 / 10.9 / 12.9', material: 'Carbon / Alloy / Stainless', standard: 'DIN 961', surface: 'Zinc / Dacromet / HDG', moq: '500', delivery: '10 days' },
   // Nuts
   { cat: 'nuts', name: 'Hex Nut', spec: 'M3 – M64', grade: '8 / 10 / 12', material: 'Carbon / Stainless / Brass', standard: 'DIN 934, ISO 4032', surface: 'Zinc / Black Oxide', moq: '2,000', delivery: '5 days' },
   { cat: 'nuts', name: 'Nylon Insert Lock Nut', spec: 'M3 – M36', grade: '8 / 10', material: 'Carbon / Stainless', standard: 'DIN 985', surface: 'Zinc / Passivated', moq: '1,000', delivery: '7 days' },
@@ -41,6 +43,12 @@ var allProducts = [
   { cat: 'nuts', name: 'Square Nut', spec: 'M3 – M12', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 557', surface: 'Plain / Zinc', moq: '3,000', delivery: '5 days' },
   { cat: 'nuts', name: 'T-Nut', spec: 'M4 – M16', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 508', surface: 'Zinc / Black Oxide', moq: '2,000', delivery: '7 days' },
   { cat: 'nuts', name: 'Round Nut', spec: 'M10 – M80', grade: '8', material: 'Carbon / 45# Steel', standard: 'DIN 1804', surface: 'Black Oxide / Zinc', moq: '500', delivery: '10 days' },
+  { cat: 'nuts', name: 'Coupling Nut (Long)', spec: 'M4 – M24', grade: '8', material: 'Carbon / Stainless', standard: 'DIN 6334', surface: 'Zinc / Passivated', moq: '1,000', delivery: '7 days' },
+  { cat: 'nuts', name: 'Cage Nut', spec: 'M4 – M12', grade: '—', material: 'Spring Steel', standard: 'Server Rack Type', surface: 'Zinc / Black Oxide', moq: '5,000', delivery: '5 days' },
+  { cat: 'nuts', name: 'Rivet Nut (Nutsert)', spec: 'M3 – M12', grade: '—', material: 'Carbon / Stainless / Al', standard: 'GB/T 17880', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
+  { cat: 'nuts', name: 'Eye Nut', spec: 'M6 – M24', grade: '8', material: 'Carbon / Stainless', standard: 'DIN 582', surface: 'Zinc / Passivated', moq: '500', delivery: '7 days' },
+  { cat: 'nuts', name: 'Thin Hex Nut (Jam Nut)', spec: 'M3 – M36', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 439', surface: 'Zinc / Passivated', moq: '2,000', delivery: '5 days' },
+  { cat: 'nuts', name: 'Hex Long Nut', spec: 'M4 – M20', grade: '8', material: 'Carbon / Stainless', standard: 'DIN 6334', surface: 'Zinc / Passivated', moq: '1,000', delivery: '7 days' },
   // Screws
   { cat: 'screws', name: 'Pan Head Self-Tapping', spec: 'ST2.2 – ST6.3', grade: '—', material: 'Carbon Steel / SS410', standard: 'GB/T 845, DIN 968', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
   { cat: 'screws', name: 'CSK Self-Tapping Screw', spec: 'ST2.2 – ST6.3', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 969', surface: 'Zinc / Black Oxide', moq: '5,000', delivery: '5 days' },
@@ -50,6 +58,10 @@ var allProducts = [
   { cat: 'screws', name: 'Hex Wood Screw', spec: 'M4 – M16', grade: '—', material: 'Carbon Steel', standard: 'DIN 571', surface: 'Zinc', moq: '3,000', delivery: '5 days' },
   { cat: 'screws', name: 'Hex Flange Self-Tap', spec: 'ST3.5 – ST6.3', grade: '—', material: 'Carbon / Stainless', standard: 'GB/T 16824', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
   { cat: 'screws', name: 'Lifting Eye Screw', spec: 'M8 – M36', grade: '—', material: '20# Steel / Stainless', standard: 'GB/T 825', surface: 'Zinc / Passivated', moq: '200', delivery: '7 days' },
+  { cat: 'screws', name: 'Button Head Socket Screw', spec: 'M3 – M12', grade: '8.8 / 10.9 / A2-70', material: 'Alloy / Stainless', standard: 'ISO 7380', surface: 'Black Oxide / Passivated', moq: '3,000', delivery: '7 days' },
+  { cat: 'screws', name: 'Drywall Screw', spec: '3.5 – 6.3mm', grade: '—', material: 'Carbon Steel', standard: 'GB/T 14210', surface: 'Black Phosphated', moq: '10,000', delivery: '5 days' },
+  { cat: 'screws', name: 'Shoulder Screw (Stripper)', spec: 'M5 – M24', grade: '10.9 / 12.9', material: 'Alloy Steel', standard: 'DIN 7379', surface: 'Black Oxide', moq: '500', delivery: '10 days' },
+  { cat: 'screws', name: 'Knurled Thumb Screw', spec: 'M3 – M8', grade: '—', material: 'Stainless / Carbon Steel', standard: 'JB/T 364', surface: 'Plain / Chrome', moq: '2,000', delivery: '7 days' },
   // Washers
   { cat: 'washers', name: 'Flat Washer', spec: 'M2 – M64', grade: '200HV / 300HV', material: 'Carbon / Stainless / Copper', standard: 'DIN 125A, ISO 7089', surface: 'Zinc / Plain', moq: '5,000', delivery: '3 days' },
   { cat: 'washers', name: 'Spring Lock Washer', spec: 'M2 – M48', grade: '—', material: '65Mn / SS304', standard: 'DIN 127B', surface: 'Black Oxide / Zinc', moq: '5,000', delivery: '3 days' },
@@ -59,6 +71,11 @@ var allProducts = [
   { cat: 'washers', name: 'Sealing Washer', spec: 'M3 – M24', grade: '—', material: 'Cu / Al / Rubber+Metal', standard: 'JB/ZQ 4403', surface: 'Plain', moq: '3,000', delivery: '5 days' },
   { cat: 'washers', name: 'Heavy Flat Washer', spec: 'M5 – M48', grade: '300HV', material: '45# / Alloy Steel', standard: 'DIN 6916', surface: 'Zinc / Dacromet', moq: '2,000', delivery: '5 days' },
   { cat: 'washers', name: 'Countersunk Washer', spec: 'M3 – M12', grade: '200HV', material: 'Carbon / Stainless', standard: 'GB/T 848', surface: 'Zinc / Passivated', moq: '5,000', delivery: '5 days' },
+  { cat: 'washers', name: 'Wave Spring Washer', spec: 'M3 – M24', grade: '—', material: '65Mn / SS304', standard: 'DIN 137B', surface: 'Black Oxide / Passivated', moq: '5,000', delivery: '5 days' },
+  { cat: 'washers', name: 'Fender Washer', spec: 'M4 – M16', grade: '200HV', material: 'Carbon / Stainless', standard: 'DIN 9021', surface: 'Zinc / Passivated', moq: '3,000', delivery: '5 days' },
+  { cat: 'washers', name: 'Wedge Lock Washer', spec: 'M4 – M24', grade: '—', material: 'Alloy Steel / SS316', standard: 'Nord-Lock Type', surface: 'Delta Protekt / Zinc', moq: '1,000', delivery: '7 days' },
+  { cat: 'washers', name: 'Spherical Washer', spec: 'M4 – M16', grade: '200HV', material: 'Carbon / Stainless', standard: 'DIN 6319', surface: 'Zinc / Passivated', moq: '2,000', delivery: '7 days' },
+  { cat: 'washers', name: 'Curved Spring Washer', spec: 'M3 – M20', grade: '—', material: '65Mn / SS304', standard: 'DIN 137A', surface: 'Black Oxide / Passivated', moq: '5,000', delivery: '5 days' },
   // Rivets
   { cat: 'rivets', name: 'Open-End Blind Rivet', spec: '2.4 – 6.4mm', grade: '—', material: 'Al / Steel / Stainless', standard: 'DIN 7337', surface: 'Plain / Zinc', moq: '5,000', delivery: '5 days' },
   { cat: 'rivets', name: 'Closed-End Blind Rivet', spec: '3.2 – 6.4mm', grade: '—', material: 'Al / Steel / Stainless', standard: 'GB/T 12616', surface: 'Plain / Zinc', moq: '5,000', delivery: '5 days' },
@@ -68,6 +85,13 @@ var allProducts = [
   { cat: 'rivets', name: 'Peel-Type Blind Rivet', spec: '3.2 – 6.4mm', grade: '—', material: 'Al / Stainless', standard: 'GB/T 12618', surface: 'Passivated', moq: '5,000', delivery: '5 days' },
   { cat: 'rivets', name: 'Round Head Rivet', spec: '1.5 – 10mm', grade: '—', material: 'Steel / Copper / Al', standard: 'GB/T 867', surface: 'Plain / Zinc', moq: '3,000', delivery: '7 days' },
   { cat: 'rivets', name: 'Button Head Rivet', spec: '2 – 16mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 660', surface: 'Plain / Zinc', moq: '3,000', delivery: '7 days' },
+  { cat: 'rivets', name: 'Large Flange Blind Rivet', spec: '3.2 – 6.4mm', grade: '—', material: 'Al / Steel / Stainless', standard: 'DIN 7337', surface: 'Plain / Zinc', moq: '5,000', delivery: '5 days' },
+  { cat: 'rivets', name: 'Snap Rivet (Plastic)', spec: '3 – 8mm', grade: '—', material: 'Nylon / PP', standard: 'JB/T 10855', surface: 'Natural / Black', moq: '10,000', delivery: '5 days' },
+  { cat: 'rivets', name: 'Tubular Rivet', spec: '2 – 8mm', grade: '—', material: 'Brass / Copper / Al', standard: 'DIN 7340', surface: 'Plain / Nickel', moq: '5,000', delivery: '7 days' },
+  { cat: 'rivets', name: 'Rivet Nut (Threaded Insert)', spec: 'M3 – M12', grade: '—', material: 'Steel / Stainless / Al', standard: 'GB/T 17880', surface: 'Zinc / Passivated', moq: '3,000', delivery: '5 days' },
+  // Threaded Rod
+  { cat: 'pins', name: 'Threaded Rod (All Thread)', spec: 'M3 – M30 × 1m/3m', grade: '4.8 / 8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 975/976', surface: 'Zinc / HDG / Plain', moq: '200', delivery: '5 days' },
+  { cat: 'pins', name: 'Double End Stud (Tap End)', spec: 'M4 – M36', grade: '8.8 / 10.9 / A2-70', material: 'Carbon / Alloy / Stainless', standard: 'DIN 939', surface: 'Black Oxide / Zinc', moq: '500', delivery: '7 days' },
   // Pins
   { cat: 'pins', name: 'Cylindrical Dowel Pin', spec: '1 – 50mm', grade: '—', material: 'Carbon / Stainless / Bearing Steel', standard: 'DIN 7, ISO 2338', surface: 'Hardened / Passivated', moq: '1,000', delivery: '5 days' },
   { cat: 'pins', name: 'Taper Pin', spec: '2 – 40mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1', surface: 'Black Oxide', moq: '1,000', delivery: '5 days' },
@@ -78,7 +102,12 @@ var allProducts = [
   { cat: 'pins', name: 'Parallel Key', spec: '2×2 – 50×28mm', grade: '—', material: '45# / Stainless', standard: 'GB/T 1096', surface: 'Black Oxide', moq: '500', delivery: '5 days' },
   { cat: 'pins', name: 'Locating Pin', spec: '3 – 30mm', grade: '—', material: 'GCr15 / 40Cr', standard: 'DIN 6325', surface: 'Hardened / Zinc', moq: '500', delivery: '7 days' },
   { cat: 'pins', name: 'Circlip (Retaining Ring)', spec: '5 – 100mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 471-472', surface: 'Black Oxide', moq: '3,000', delivery: '5 days' },
-  { cat: 'pins', name: 'U-Clevis Pin', spec: '3 – 25mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1434', surface: 'Zinc / Passivated', moq: '2,000', delivery: '5 days' }
+  { cat: 'pins', name: 'U-Clevis Pin', spec: '3 – 25mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1434', surface: 'Zinc / Passivated', moq: '2,000', delivery: '5 days' },
+  { cat: 'pins', name: 'Clevis Pin with Hole', spec: '6 – 50mm', grade: '—', material: 'Carbon / Alloy / Stainless', standard: 'DIN 1444', surface: 'Zinc / Chrome / Hardened', moq: '500', delivery: '10 days' },
+  { cat: 'pins', name: 'Internal Thread Dowel', spec: '5 – 25mm', grade: '—', material: 'Carbon / Bearing Steel', standard: 'DIN 7979', surface: 'Hardened / Passivated', moq: '1,000', delivery: '7 days' },
+  { cat: 'pins', name: 'Headless Clevis Pin', spec: '5 – 30mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1433', surface: 'Zinc / Plain', moq: '1,000', delivery: '7 days' },
+  { cat: 'pins', name: 'Taper Spring Pin', spec: '2 – 12mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 1481', surface: 'Black Oxide', moq: '3,000', delivery: '5 days' },
+  { cat: 'pins', name: 'Expansion Plug / Wall Anchor', spec: 'M5 – M20', grade: '4.8 / 5.8', material: 'Carbon / Stainless', standard: 'GB/T 22795', surface: 'Zinc / HDG', moq: '2,000', delivery: '5 days' }
 ];
 
 var currentFilter = 'all';

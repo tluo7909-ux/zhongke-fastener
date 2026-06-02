@@ -136,7 +136,9 @@ var productData = {
       { name: 'Eye Bolt', spec: 'M6 – M24', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'DIN 444', surface: 'Zinc / Black Oxide' },
       { name: 'Lifting Eye Bolt', spec: 'M6 – M48', grade: '8.8 / 10.9', material: 'Alloy / Stainless', standard: 'DIN 580', surface: 'Zinc / Passivated' },
       { name: 'Weld Bolt', spec: 'M4 – M16', grade: '4.8 / 8.8', material: 'Carbon / Stainless', standard: 'GB/T 902', surface: 'Zinc / Copper' },
-      { name: 'Low Head Socket Screw', spec: 'M3 – M16', grade: '8.8 / 10.9 / A2-70', material: 'Alloy / Stainless', standard: 'DIN 7984', surface: 'Black Oxide / Passivated' }
+      { name: 'Low Head Socket Screw', spec: 'M3 – M16', grade: '8.8 / 10.9 / A2-70', material: 'Alloy / Stainless', standard: 'DIN 7984', surface: 'Black Oxide / Passivated' },
+      { name: 'Square Head Bolt', spec: 'M5 – M24', grade: '8.8 / 10.9', material: 'Carbon / Stainless', standard: 'DIN 478', surface: 'Zinc / Black Oxide' },
+      { name: 'Hex Bolt Fine Thread', spec: 'M8 – M48', grade: '8.8 / 10.9 / 12.9', material: 'Carbon / Alloy / SS', standard: 'DIN 961', surface: 'Zinc / Dacromet / HDG' }
     ]
   },
   nuts: {
@@ -151,7 +153,11 @@ var productData = {
       { name: 'Weld Nut', spec: 'M4 – M16', grade: '8', material: 'Carbon Steel', standard: 'DIN 929', surface: 'Zinc' },
       { name: 'Square Nut', spec: 'M3 – M12', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 557', surface: 'Plain / Zinc' },
       { name: 'T-Nut', spec: 'M4 – M16', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 508', surface: 'Zinc / Black Oxide' },
-      { name: 'Round Nut', spec: 'M10 – M80', grade: '8', material: 'Carbon / 45#', standard: 'DIN 1804', surface: 'Black Oxide / Zinc' }
+      { name: 'Round Nut', spec: 'M10 – M80', grade: '8', material: 'Carbon / 45#', standard: 'DIN 1804', surface: 'Black Oxide / Zinc' },
+      { name: 'Coupling Nut (Long)', spec: 'M4 – M24', grade: '8', material: 'Carbon / Stainless', standard: 'DIN 6334', surface: 'Zinc / Passivated' },
+      { name: 'Cage Nut', spec: 'M4 – M12', grade: '—', material: 'Spring Steel', standard: 'Server Rack', surface: 'Zinc / Black Oxide' },
+      { name: 'Rivet Nut (Nutsert)', spec: 'M3 – M12', grade: '—', material: 'Carbon / SS / Al', standard: 'GB/T 17880', surface: 'Zinc / Passivated' },
+      { name: 'Thin Hex Jam Nut', spec: 'M3 – M36', grade: '6 / 8', material: 'Carbon / Stainless', standard: 'DIN 439', surface: 'Zinc / Passivated' }
     ]
   },
   screws: {
@@ -164,7 +170,11 @@ var productData = {
       { name: 'Socket Set Screw', spec: 'M2 – M24', grade: '12.9 / A2-70', material: 'Alloy / Stainless', standard: 'DIN 913', surface: 'Black Oxide / Passivated' },
       { name: 'Hex Wood Screw', spec: 'M4 – M16', grade: '—', material: 'Carbon Steel', standard: 'DIN 571', surface: 'Zinc' },
       { name: 'Hex Flange Self-Tap', spec: 'ST3.5 – ST6.3', grade: '—', material: 'Carbon / Stainless', standard: 'GB/T 16824', surface: 'Zinc / Passivated' },
-      { name: 'Lifting Eye Screw', spec: 'M8 – M36', grade: '—', material: '20# / Stainless', standard: 'GB/T 825', surface: 'Zinc / Passivated' }
+      { name: 'Lifting Eye Screw', spec: 'M8 – M36', grade: '—', material: '20# / Stainless', standard: 'GB/T 825', surface: 'Zinc / Passivated' },
+      { name: 'Button Head Socket', spec: 'M3 – M12', grade: '8.8 / 10.9 / A2-70', material: 'Alloy / Stainless', standard: 'ISO 7380', surface: 'Black Oxide / Passivated' },
+      { name: 'Drywall Screw', spec: '3.5 – 6.3mm', grade: '—', material: 'Carbon Steel', standard: 'GB/T 14210', surface: 'Black Phosphated' },
+      { name: 'Shoulder Screw', spec: 'M5 – M24', grade: '10.9 / 12.9', material: 'Alloy Steel', standard: 'DIN 7379', surface: 'Black Oxide' },
+      { name: 'Knurled Thumb Screw', spec: 'M3 – M8', grade: '—', material: 'Stainless / Carbon', standard: 'JB/T 364', surface: 'Plain / Chrome' }
     ]
   },
   washers: {
@@ -177,7 +187,11 @@ var productData = {
       { name: 'Tab Washer', spec: 'M3 – M36', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 463', surface: 'Black Oxide' },
       { name: 'Sealing Washer', spec: 'M3 – M24', grade: '—', material: 'Cu / Al / Rubber+Metal', standard: 'JB/ZQ 4403', surface: 'Plain' },
       { name: 'Heavy Flat Washer', spec: 'M5 – M48', grade: '300HV', material: '45# / Alloy Steel', standard: 'DIN 6916', surface: 'Zinc / Dacromet' },
-      { name: 'Countersunk Washer', spec: 'M3 – M12', grade: '200HV', material: 'Carbon / Stainless', standard: 'GB/T 848', surface: 'Zinc / Passivated' }
+      { name: 'Countersunk Washer', spec: 'M3 – M12', grade: '200HV', material: 'Carbon / Stainless', standard: 'GB/T 848', surface: 'Zinc / Passivated' },
+      { name: 'Wave Spring Washer', spec: 'M3 – M24', grade: '—', material: '65Mn / SS304', standard: 'DIN 137B', surface: 'Black Oxide / Passivated' },
+      { name: 'Fender Washer', spec: 'M4 – M16', grade: '200HV', material: 'Carbon / Stainless', standard: 'DIN 9021', surface: 'Zinc / Passivated' },
+      { name: 'Wedge Lock Washer', spec: 'M4 – M24', grade: '—', material: 'Alloy / SS316', standard: 'Nord-Lock Type', surface: 'Delta Protekt' },
+      { name: 'Curved Spring Washer', spec: 'M3 – M20', grade: '—', material: '65Mn / SS304', standard: 'DIN 137A', surface: 'Black Oxide' }
     ]
   },
   rivets: {
@@ -190,7 +204,10 @@ var productData = {
       { name: 'Lockbolt (Huck)', spec: '4.0 – 12.0mm', grade: '10.9 / 12.9', material: 'Carbon / Alloy Steel', standard: 'GB/T 26565', surface: 'Zinc / Dacromet' },
       { name: 'Peel-Type Blind Rivet', spec: '3.2 – 6.4mm', grade: '—', material: 'Al / Stainless', standard: 'GB/T 12618', surface: 'Passivated' },
       { name: 'Round Head Rivet', spec: '1.5 – 10mm', grade: '—', material: 'Steel / Cu / Al', standard: 'GB/T 867', surface: 'Plain / Zinc' },
-      { name: 'Button Head Rivet', spec: '2 – 16mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 660', surface: 'Plain / Zinc' }
+      { name: 'Button Head Rivet', spec: '2 – 16mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 660', surface: 'Plain / Zinc' },
+      { name: 'Large Flange Blind Rivet', spec: '3.2 – 6.4mm', grade: '—', material: 'Al / Steel / SS', standard: 'DIN 7337', surface: 'Plain / Zinc' },
+      { name: 'Tubular Rivet', spec: '2 – 8mm', grade: '—', material: 'Brass / Cu / Al', standard: 'DIN 7340', surface: 'Plain / Nickel' },
+      { name: 'Rivet Nut (Threaded Insert)', spec: 'M3 – M12', grade: '—', material: 'Steel / SS / Al', standard: 'GB/T 17880', surface: 'Zinc / Passivated' }
     ]
   },
   pins: {
@@ -205,7 +222,11 @@ var productData = {
       { name: 'Parallel Key', spec: '2×2 – 50×28mm', grade: '—', material: '45# / Stainless', standard: 'GB/T 1096', surface: 'Black Oxide' },
       { name: 'Locating Pin', spec: '3 – 30mm', grade: '—', material: 'GCr15 / 40Cr', standard: 'DIN 6325', surface: 'Hardened / Zinc' },
       { name: 'Circlip', spec: '5 – 100mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 471-472', surface: 'Black Oxide' },
-      { name: 'U-Clevis Pin', spec: '3 – 25mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1434', surface: 'Zinc / Passivated' }
+      { name: 'U-Clevis Pin', spec: '3 – 25mm', grade: '—', material: 'Carbon / Stainless', standard: 'DIN 1434', surface: 'Zinc / Passivated' },
+      { name: 'Clevis Pin with Hole', spec: '6 – 50mm', grade: '—', material: 'Carbon / Alloy / SS', standard: 'DIN 1444', surface: 'Zinc / Chrome' },
+      { name: 'Threaded Rod (All Thread)', spec: 'M3 – M30 × 1m/3m', grade: '4.8 / 8.8 / A2-70', material: 'Carbon / Stainless', standard: 'DIN 975/976', surface: 'Zinc / HDG / Plain' },
+      { name: 'Expansion Plug/Wall Anchor', spec: 'M5 – M20', grade: '4.8 / 5.8', material: 'Carbon / Stainless', standard: 'GB/T 22795', surface: 'Zinc / HDG' },
+      { name: 'Taper Spring Pin', spec: '2 – 12mm', grade: '—', material: '65Mn / Stainless', standard: 'DIN 1481', surface: 'Black Oxide' }
     ]
   }
 };
