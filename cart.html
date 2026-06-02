@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quote Cart — ZhongKe Fastener. Review your selected fasteners and submit a quote request or pay via PayPal.">
+  <title>Quote Cart | ZhongKe Fastener</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .cart-page { padding: 3rem 0 6rem 0; }
+    .cart-page h1 { margin-bottom: 0.5rem; }
+    .cart-page .subtitle { color: var(--gray-500); margin-bottom: 2rem; }
+    .checkout-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+    @media (max-width: 768px) { .checkout-section { grid-template-columns: 1fr; } }
+    .checkout-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem; border: 1px solid var(--gray-100); }
+    .checkout-card h3 { margin-bottom: 1rem; }
+    .checkout-card p { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 1.2rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-size: 0.9rem; font-family: inherit; }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .btn-submit { background: var(--orange); color: #fff; border: none; border-radius: 8px; padding: 12px 28px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; }
+    .btn-submit:hover { background: #d9701a; }
+    .btn-paypal { background: #ffc439; color: #111; border: none; border-radius: 8px; padding: 12px 28px; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; }
+    .btn-paypal:hover { background: #f0b830; }
+    .btn-secondary { background: var(--gray-100); color: var(--text); border: 1px solid var(--gray-200); border-radius: 8px; padding: 12px 28px; font-size: 1rem; font-weight: 600; cursor: pointer; text-align: center; display: block; text-decoration: none; }
+    .btn-secondary:hover { background: var(--gray-200); }
+    .total-row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--gray-100); font-size: 0.95rem; }
+    .total-row.final { font-size: 1.2rem; font-weight: 700; border: none; margin-top: 0.5rem; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #22c55e; color: #000; padding: 12px 24px; border-radius: 8px; font-weight: 600; z-index: 9999; display:none; }
+  </style>
+</head>
+<body>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar"><div class="container"><div class="trust-bar-left"><span>ISO 9001:2015</span><span>CE Certified</span><span>RoHS Compliant</span></div></div></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 40 40" fill="none" style="width:38px;height:38px"><rect width="40" height="40" rx="6" fill="#f48120"/><path d="M20 8l-4 12H8l10 8-4 10 14-12h8L20 8z" fill="#fff"/></svg>
+        ZhongKe
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="active cart-nav-link">🛒 Quote Cart <span class="cart-badge" style="display:none;background:var(--orange);color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;align-items:center;justify-content:center;vertical-align:middle;">0</span></a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get a Quote</a></div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Cart Content -->
+  <section class="cart-page">
+    <div class="container">
+      <h1>🛒 Quote Cart</h1>
+      <p class="subtitle">Review your selected products, then submit a quote request or pay directly.</p>
+
+      <div id="cartContent"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;">
+            <svg viewBox="0 0 40 40" fill="none" style="width:32px;height:32px"><rect width="40" height="40" rx="6" fill="#f48120"/><path d="M20 8l-4 12H8l10 8-4 10 14-12h8L20 8z" fill="#fff"/></svg>
+            <strong style="font-size:1.2rem;">ZhongKe Fastener</strong>
+          </div>
+          <p>Professional fastener manufacturer since 2005. ISO 9001 certified factory in Dongtai, Jiangsu, China.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Quote Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>📞 +86 138-0722-1298</li>
+            <li>📧 sales@zhongke-fastener.com</li>
+            <li>📍 No.18 Kaizhuang, Qindong Town, Dongtai City, Jiangsu, China</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 ZhongKe Fastener. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script>
+    // =========== Render Cart ===========
+    function renderCart() {
+      var items = ZKCart.getAll();
+      var el = document.getElementById('cartContent');
+
+      if (items.length === 0) {
+        el.innerHTML = '<div class="cart-empty"><h2>🛒 Your quote cart is empty</h2><p>Browse our <a href="products.html">product catalog</a> and add items to your quote.</p><br><a href="products.html" class="btn btn-primary">Browse Products</a></div>';
+        return;
+      }
+
+      var html = '';
+      html += '<div style="overflow-x:auto;"><table class="cart-table"><thead><tr><th>Product</th><th>Spec</th><th>Material / Grade</th><th>Standard</th><th>Qty (pcs)</th><th></th></tr></thead><tbody>';
+
+      items.forEach(function(item, i) {
+        html += '<tr>';
+        html += '<td><strong>' + item.name + '</strong></td>';
+        html += '<td>' + item.spec + '</td>';
+        html += '<td>' + item.material + ' / ' + item.grade + '</td>';
+        html += '<td>' + item.standard + '</td>';
+        html += '<td><input type="number" class="qty-input" value="' + item.qty + '" min="1" onchange="ZKCart.updateQty(\'' + item.id.replace(/'/g, "\\'") + '\', this.value); renderCart();" style="width:70px;"></td>';
+        html += '<td><button class="btn-remove" onclick="ZKCart.remove(\'' + item.id.replace(/'/g, "\\'") + '\'); renderCart();" title="Remove">✕</button></td>';
+        html += '</tr>';
+      });
+
+      html += '</tbody></table></div>';
+
+      html += '<div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;">';
+      html += '<button class="btn-secondary" onclick="ZKCart.clear(); renderCart();" style="width:auto;">Clear Cart</button>';
+      html += '<a href="products.html" class="btn-secondary" style="width:auto;">← Continue Browsing</a>';
+      html += '</div>';
+
+      // Checkout Section
+      html += '<div class="checkout-section">';
+
+      // Option 1: Request Quote
+      html += '<div class="checkout-card">';
+      html += '<h3>📧 Request a Quote</h3>';
+      html += '<p>Our sales team will email you a detailed quotation within 24 hours.</p>';
+      html += '<form id="quoteForm">';
+      html += '<div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div>';
+      html += '<div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>';
+      html += '<div class="form-group"><label>Company / Country</label><input type="text" name="company"></div>';
+      html += '<div class="form-group"><label>Additional Notes / Special Requirements</label><textarea name="notes" placeholder="E.g., custom packaging, special surface treatment, urgent delivery..."></textarea></div>';
+      html += '<input type="hidden" name="order" id="orderSummary">';
+      html += '<button type="submit" class="btn-submit">Submit Quote Request</button>';
+      html += '</form>';
+      html += '</div>';
+
+      // Option 2: PayPal Quick Pay
+      html += '<div class="checkout-card">';
+      html += '<h3>💳 Pay with PayPal</h3>';
+      html += '<p>For standard products. After payment, we will confirm your order and ship within 7 days.</p>';
+      html += '<div style="background:#fef3c7;padding:12px;border-radius:8px;margin-bottom:1rem;font-size:0.85rem;">';
+      html += '⚠️ <strong>Note:</strong> For custom specs or bulk orders, please use "Request a Quote" on the left first.';
+      html += '</div>';
+      html += '<div id="paypal-button-container"></div>';
+      html += '</div>';
+
+      html += '</div>'; // end checkout-section
+
+      el.innerHTML = html;
+
+      // Build order summary
+      var summary = items.map(function(i) {
+        return i.name + ' (' + i.spec + ') x ' + i.qty + ' pcs — Grade: ' + i.grade + ' / ' + i.material + ' / ' + i.standard;
+      }).join('\n');
+      var summaryEl = document.getElementById('orderSummary');
+      if (summaryEl) summaryEl.value = summary;
+
+      // Handle form submit
+      var formEl = document.getElementById('quoteForm');
+      if (formEl) {
+        formEl.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var data = new FormData(formEl);
+          var body = 'Quote Request from ZhongKe Fastener\n\n';
+          body += '--- Customer Info ---\n';
+          body += 'Name: ' + data.get('name') + '\n';
+          body += 'Email: ' + data.get('email') + '\n';
+          body += 'Company: ' + data.get('company') + '\n';
+          body += 'Notes: ' + data.get('notes') + '\n\n';
+          body += '--- Order Items ---\n';
+          body += summary + '\n\n';
+          body += '--- End ---\n';
+
+          // Open email client as fallback (static site can't send email server-side)
+          var mailto = 'mailto:sales@zhongke-fastener.com?subject=Quote Request from ' + encodeURIComponent(data.get('name')) + '&body=' + encodeURIComponent(body);
+          window.open(mailto, '_blank');
+
+          var toast = document.getElementById('toast');
+          toast.style.display = 'block';
+          toast.textContent = '✓ Email opened! Send it to complete your quote request.';
+          setTimeout(function() { toast.style.display = 'none'; }, 4000);
+        });
+      }
+
+      // PayPal
+      if (typeof paypal !== 'undefined') {
+        paypal.Buttons({
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{ description: 'ZhongKe Fastener Products', items: items.map(function(i) {
+                return { name: i.name + ' ' + i.spec, quantity: String(i.qty), unit_amount: { currency_code: 'USD', value: '1.00' } };
+              }), amount: { currency_code: 'USD', value: String(items.reduce(function(s, i) { return s + i.qty; }, 0)), breakdown: { item_total: { currency_code: 'USD', value: String(items.reduce(function(s, i) { return s + i.qty; }, 0)) } } } }]
+            });
+          },
+          onApprove: function(data) {
+            alert('Payment successful! Order ID: ' + data.orderID + '\n\nWe will contact you shortly to confirm shipping details.');
+            ZKCart.clear(); renderCart();
+          },
+          onError: function(err) {
+            alert('Payment error. Please try the "Request a Quote" option instead.');
+          }
+        }).render('#paypal-button-container');
+      } else {
+        var ppEl = document.getElementById('paypal-button-container');
+        if (ppEl) ppEl.innerHTML = '<p style="color:#666;font-size:0.9rem;">PayPal will load here. If you don\'t see it, please use the Quote Request form on the left.</p>';
+      }
+    }
+
+    // Initialize
+    renderCart();
+  </script>
+
+  <!-- PayPal SDK (sandbox; switch to production when ready) -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA8sH6nGqLMJJxPKQDvHWyGafwkHXtNKsG1gvPbPJYQe5hFWmGQ3Q1LjhWKfGJDX6E2BVuDtRQGM8eXJk&currency=USD" data-namespace="paypal"></script>
+  <div class="toast" id="toast"></div>
+</body>
+</html>

@@ -166,7 +166,8 @@ function renderProductCards(products) {
     html += '<div class="prod-meta">';
     html += '<span>MOQ: ' + p.moq + ' pcs</span>';
     html += '<span>Delivery: ' + p.delivery + '</span>';
-    html += '<a href="contact.html" class="inquiry-link" style="margin-left:auto;">Inquire &#x2192;</a>';
+    html += '<a href="contact.html" class="inquiry-link">Inquire</a>';
+    html += '<button class="btn-add-cart" onclick="ZKCart.add({name:\'' + p.name.replace(/'/g, "\\'") + '\',spec:\'' + p.spec.replace(/'/g, "\\'") + '\',grade:\'' + (p.grade||'').replace(/'/g, "\\'") + '\',material:\'' + (p.material||'').replace(/'/g, "\\'") + '\',standard:\'' + (p.standard||'').replace(/'/g, "\\'") + '\',surface:\'' + (p.surface||'').replace(/'/g, "\\'") + '\'});this.textContent=\'✓ Added\';setTimeout(function(){this.textContent=\'+ Add to Quote\'}.bind(this),1500)" style="margin-left:auto;">+ Add to Quote</button>';
     html += '</div>';
     html += '</div>';
     html += '</div>';

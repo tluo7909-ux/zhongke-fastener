@@ -272,7 +272,7 @@ function updateProductTable(cat) {
     html += '<td>' + item.grade + '<br><small style="color:var(--gray-500);">' + item.material + '</small></td>';
     html += '<td style="font-size:0.82rem;">' + item.standard + '</td>';
     html += '<td>' + item.surface + '</td>';
-    html += '<td><a href="contact.html" class="inquiry-link">Inquire &#x2192;</a></td>';
+    html += '<td style="white-space:nowrap;"><a href="contact.html" class="inquiry-link" style="margin-right:8px;">Inquire</a><button class="btn-add-cart-sm" onclick="ZKCart.add({name:this.dataset.n,spec:this.dataset.s,grade:this.dataset.g,material:this.dataset.m,standard:this.dataset.std,surface:this.dataset.sf});this.textContent=\'✓\';var b=this;setTimeout(function(){b.textContent=\'+ Add\'},1200)" data-n="' + item.name.replace(/"/g, '&quot;') + '" data-s="' + item.spec.replace(/"/g, '&quot;') + '" data-g="' + (item.grade||'').replace(/"/g, '&quot;') + '" data-m="' + (item.material||'').replace(/"/g, '&quot;') + '" data-std="' + (item.standard||'').replace(/"/g, '&quot;') + '" data-sf="' + (item.surface||'').replace(/"/g, '&quot;') + '">+ Add</button></td>';
     html += '</tr>';
   });
   document.getElementById('tableBody').innerHTML = html;
