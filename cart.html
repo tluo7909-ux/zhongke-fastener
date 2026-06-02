@@ -32,10 +32,8 @@
 </head>
 <body>
 
-  <!-- Trust Bar -->
   <div class="trust-bar"><div class="container"><div class="trust-bar-left"><span>ISO 9001:2015</span><span>CE Certified</span><span>RoHS Compliant</span></div></div></div>
 
-  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
@@ -47,24 +45,21 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html" class="active cart-nav-link">🛒 Quote Cart <span class="cart-badge" style="display:none;background:var(--orange);color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;align-items:center;justify-content:center;vertical-align:middle;">0</span></a></li>
+        <li><a href="cart.html" class="active cart-nav-link">Quote Cart <span class="cart-badge" style="display:none;background:var(--orange);color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;align-items:center;justify-content:center;vertical-align:middle;">0</span></a></li>
       </ul>
       <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get a Quote</a></div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- Cart Content -->
   <section class="cart-page">
     <div class="container">
-      <h1>🛒 Quote Cart</h1>
-      <p class="subtitle">Review your selected products, then submit a quote request or pay directly.</p>
-
+      <h1>Quote Cart</h1>
+      <p class="subtitle">Review your selected products, request a quote, or pay with PayPal.</p>
       <div id="cartContent"></div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -77,20 +72,11 @@
         </div>
         <div>
           <h4>Quick Links</h4>
-          <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html">Quote Cart</a></li>
-          </ul>
+          <ul><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="cart.html">Quote Cart</a></li></ul>
         </div>
         <div>
           <h4>Contact</h4>
-          <ul>
-            <li>📞 +86 138-0722-1298</li>
-            <li>📧 sales@zhongke-fastener.com</li>
-            <li>📍 No.18 Kaizhuang, Qindong Town, Dongtai City, Jiangsu, China</li>
-          </ul>
+          <ul><li>+86 138-0722-1298</li><li>sales@zhongke-fastener.com</li><li>No.18 Kaizhuang, Qindong Town, Dongtai City, Jiangsu, China</li></ul>
         </div>
       </div>
       <div class="footer-bottom"><p>&copy; 2025 ZhongKe Fastener. All rights reserved.</p></div>
@@ -99,131 +85,85 @@
 
   <script src="js/cart.js"></script>
   <script>
-    // =========== Render Cart ===========
+    function esc(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, "\\'");
+    }
+
     function renderCart() {
       var items = ZKCart.getAll();
       var el = document.getElementById('cartContent');
+      var h = '';
 
+      // Product table or empty message
       if (items.length === 0) {
-        el.innerHTML = '<div class="cart-empty"><h2>🛒 Your quote cart is empty</h2><p>Browse our <a href="products.html">product catalog</a> and add items to your quote.</p><br><a href="products.html" class="btn btn-primary">Browse Products</a></div>';
-        return;
+        h += '<div class="cart-empty"><h2>Your quote cart is empty</h2><p>Browse <a href="products.html">products</a> to add items.</p><br><a href="products.html" class="btn btn-primary">Browse Products</a></div>';
+      } else {
+        h += '<div style="overflow-x:auto;"><table class="cart-table"><thead><tr><th>Product</th><th>Spec</th><th>Material / Grade</th><th>Standard</th><th>Qty</th><th></th></tr></thead><tbody>';
+        items.forEach(function(it) {
+          var sid = it.id.replace(/'/g, "\\'");
+          h += '<tr><td><strong>' + it.name + '</strong></td><td>' + it.spec + '</td><td>' + it.material + ' / ' + it.grade + '</td><td>' + it.standard + '</td><td><input type="number" class="qty-input" value="' + it.qty + '" min="1" onchange="ZKCart.updateQty(\'' + sid + '\',this.value);renderCart();" style="width:70px;"></td><td><button class="btn-remove" onclick="ZKCart.remove(\'' + sid + '\');renderCart();">X</button></td></tr>';
+        });
+        h += '</tbody></table></div>';
+        h += '<div style="display:flex;gap:1rem;margin-top:1rem;"><button class="btn-secondary" onclick="ZKCart.clear();renderCart();" style="width:auto;">Clear Cart</button><a href="products.html" class="btn-secondary" style="width:auto;">Continue Browsing</a></div>';
       }
 
-      var html = '';
-      html += '<div style="overflow-x:auto;"><table class="cart-table"><thead><tr><th>Product</th><th>Spec</th><th>Material / Grade</th><th>Standard</th><th>Qty (pcs)</th><th></th></tr></thead><tbody>';
+      // Checkout section - always visible
+      h += '<div class="checkout-section">';
 
-      items.forEach(function(item, i) {
-        html += '<tr>';
-        html += '<td><strong>' + item.name + '</strong></td>';
-        html += '<td>' + item.spec + '</td>';
-        html += '<td>' + item.material + ' / ' + item.grade + '</td>';
-        html += '<td>' + item.standard + '</td>';
-        html += '<td><input type="number" class="qty-input" value="' + item.qty + '" min="1" onchange="ZKCart.updateQty(\'' + item.id.replace(/'/g, "\\'") + '\', this.value); renderCart();" style="width:70px;"></td>';
-        html += '<td><button class="btn-remove" onclick="ZKCart.remove(\'' + item.id.replace(/'/g, "\\'") + '\'); renderCart();" title="Remove">✕</button></td>';
-        html += '</tr>';
-      });
+      // Quote form
+      h += '<div class="checkout-card"><h3>Request a Quote</h3><p>We will reply within 24 hours with pricing and shipping details.</p><form id="quoteForm"><div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div><div class="form-group"><label>Company / Country</label><input type="text" name="company"></div><div class="form-group"><label>Notes</label><textarea name="notes" placeholder="Custom specs, packaging, delivery requirements..."></textarea></div><input type="hidden" name="order" id="orderSummary"><button type="submit" class="btn-submit">Submit Quote Request</button></form></div>';
 
-      html += '</tbody></table></div>';
+      // PayPal card
+      h += '<div class="checkout-card"><h3>Pay with PayPal</h3><p>For standard products. We confirm your order and ship within 7 days.</p><div style="background:#fef3c7;padding:12px;border-radius:8px;margin-bottom:1rem;font-size:0.85rem;">For custom specs or bulk orders, please use the Quote Request form first.</div><div id="paypal-button-container"><p style="color:#999;">PayPal loading...</p></div></div>';
 
-      html += '<div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;">';
-      html += '<button class="btn-secondary" onclick="ZKCart.clear(); renderCart();" style="width:auto;">Clear Cart</button>';
-      html += '<a href="products.html" class="btn-secondary" style="width:auto;">← Continue Browsing</a>';
-      html += '</div>';
+      h += '</div>';
 
-      // Checkout Section
-      html += '<div class="checkout-section">';
+      el.innerHTML = h;
 
-      // Option 1: Request Quote
-      html += '<div class="checkout-card">';
-      html += '<h3>📧 Request a Quote</h3>';
-      html += '<p>Our sales team will email you a detailed quotation within 24 hours.</p>';
-      html += '<form id="quoteForm">';
-      html += '<div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div>';
-      html += '<div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>';
-      html += '<div class="form-group"><label>Company / Country</label><input type="text" name="company"></div>';
-      html += '<div class="form-group"><label>Additional Notes / Special Requirements</label><textarea name="notes" placeholder="E.g., custom packaging, special surface treatment, urgent delivery..."></textarea></div>';
-      html += '<input type="hidden" name="order" id="orderSummary">';
-      html += '<button type="submit" class="btn-submit">Submit Quote Request</button>';
-      html += '</form>';
-      html += '</div>';
+      // Order summary for email
+      var summary = items.length > 0
+        ? items.map(function(i) { return i.name + ' (' + i.spec + ') x ' + i.qty + ' pcs - ' + i.grade + ' / ' + i.material; }).join('\n')
+        : '(General inquiry - no specific items added)';
+      var se = document.getElementById('orderSummary');
+      if (se) se.value = summary;
 
-      // Option 2: PayPal Quick Pay
-      html += '<div class="checkout-card">';
-      html += '<h3>💳 Pay with PayPal</h3>';
-      html += '<p>For standard products. After payment, we will confirm your order and ship within 7 days.</p>';
-      html += '<div style="background:#fef3c7;padding:12px;border-radius:8px;margin-bottom:1rem;font-size:0.85rem;">';
-      html += '⚠️ <strong>Note:</strong> For custom specs or bulk orders, please use "Request a Quote" on the left first.';
-      html += '</div>';
-      html += '<div id="paypal-button-container"></div>';
-      html += '</div>';
-
-      html += '</div>'; // end checkout-section
-
-      el.innerHTML = html;
-
-      // Build order summary
-      var summary = items.map(function(i) {
-        return i.name + ' (' + i.spec + ') x ' + i.qty + ' pcs — Grade: ' + i.grade + ' / ' + i.material + ' / ' + i.standard;
-      }).join('\n');
-      var summaryEl = document.getElementById('orderSummary');
-      if (summaryEl) summaryEl.value = summary;
-
-      // Handle form submit
-      var formEl = document.getElementById('quoteForm');
-      if (formEl) {
-        formEl.addEventListener('submit', function(e) {
+      // Handle form
+      var fe = document.getElementById('quoteForm');
+      if (fe) {
+        fe.addEventListener('submit', function(e) {
           e.preventDefault();
-          var data = new FormData(formEl);
-          var body = 'Quote Request from ZhongKe Fastener\n\n';
-          body += '--- Customer Info ---\n';
-          body += 'Name: ' + data.get('name') + '\n';
-          body += 'Email: ' + data.get('email') + '\n';
-          body += 'Company: ' + data.get('company') + '\n';
-          body += 'Notes: ' + data.get('notes') + '\n\n';
-          body += '--- Order Items ---\n';
-          body += summary + '\n\n';
-          body += '--- End ---\n';
-
-          // Open email client as fallback (static site can't send email server-side)
-          var mailto = 'mailto:sales@zhongke-fastener.com?subject=Quote Request from ' + encodeURIComponent(data.get('name')) + '&body=' + encodeURIComponent(body);
-          window.open(mailto, '_blank');
-
-          var toast = document.getElementById('toast');
-          toast.style.display = 'block';
-          toast.textContent = '✓ Email opened! Send it to complete your quote request.';
-          setTimeout(function() { toast.style.display = 'none'; }, 4000);
+          var d = new FormData(fe);
+          var body = 'Quote Request - ZhongKe Fastener\n\n--- Customer ---\nName: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nCompany: ' + d.get('company') + '\nNotes: ' + d.get('notes') + '\n\n--- Items ---\n' + summary + '\n';
+          window.open('mailto:sales@zhongke-fastener.com?subject=Quote Request: ' + d.get('name') + '&body=' + encodeURIComponent(body), '_blank');
+          var t = document.getElementById('toast');
+          t.style.display = 'block'; t.textContent = 'Email opened! Send it to complete your request.';
+          setTimeout(function(){ t.style.display = 'none'; }, 4000);
         });
       }
 
-      // PayPal
+      // PayPal - always render
       if (typeof paypal !== 'undefined') {
         paypal.Buttons({
           createOrder: function(data, actions) {
+            var total = items.length > 0 ? String(items.reduce(function(s,i){ return s + i.qty; }, 0)) : '1';
             return actions.order.create({
-              purchase_units: [{ description: 'ZhongKe Fastener Products', items: items.map(function(i) {
-                return { name: i.name + ' ' + i.spec, quantity: String(i.qty), unit_amount: { currency_code: 'USD', value: '1.00' } };
-              }), amount: { currency_code: 'USD', value: String(items.reduce(function(s, i) { return s + i.qty; }, 0)), breakdown: { item_total: { currency_code: 'USD', value: String(items.reduce(function(s, i) { return s + i.qty; }, 0)) } } } }]
+              purchase_units: [{ description: 'ZhongKe Fastener Products', amount: { currency_code: 'USD', value: total } }]
             });
           },
           onApprove: function(data) {
-            alert('Payment successful! Order ID: ' + data.orderID + '\n\nWe will contact you shortly to confirm shipping details.');
+            alert('Payment successful! Order ID: ' + data.orderID + '\nWe will contact you shortly.');
             ZKCart.clear(); renderCart();
           },
-          onError: function(err) {
-            alert('Payment error. Please try the "Request a Quote" option instead.');
+          onError: function() {
+            alert('Payment error. Please use the Quote Request form.');
           }
         }).render('#paypal-button-container');
-      } else {
-        var ppEl = document.getElementById('paypal-button-container');
-        if (ppEl) ppEl.innerHTML = '<p style="color:#666;font-size:0.9rem;">PayPal will load here. If you don\'t see it, please use the Quote Request form on the left.</p>';
       }
     }
 
-    // Initialize
     renderCart();
   </script>
 
-  <!-- PayPal SDK (sandbox; switch to production when ready) -->
   <script src="https://www.paypal.com/sdk/js?client-id=ARWNnqs88dtuVoav2H5Z6DGva9BfVeju_D0IdSC4A8fY_S0EumtQ-B4wIGmDFtWdvS3dse5pOvp10d26&currency=USD" data-namespace="paypal"></script>
   <div class="toast" id="toast"></div>
 </body>
