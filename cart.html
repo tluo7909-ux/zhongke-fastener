@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Quote Cart — ZhongKe Fastener. Review your selected fasteners and submit a quote request or pay via PayPal.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg">
   <title>Quote Cart | ZhongKe Fastener</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -145,17 +147,20 @@
       if (typeof paypal !== 'undefined') {
         paypal.Buttons({
           createOrder: function(data, actions) {
-            var total = items.length > 0 ? String(items.reduce(function(s,i){ return s + i.qty; }, 0)) : '1';
             return actions.order.create({
-              purchase_units: [{ description: 'ZhongKe Fastener Products', amount: { currency_code: 'USD', value: total } }]
+              purchase_units: [{
+                description: 'ZhongKe Fastener — Quote Payment',
+                amount: { currency_code: 'USD', value: '1.00' },
+                note_to_payer: 'Enter the amount from your quote confirmation. We will verify and confirm your order within 24 hours.'
+              }]
             });
           },
           onApprove: function(data) {
-            alert('Payment successful! Order ID: ' + data.orderID + '\nWe will contact you shortly.');
+            alert('Payment confirmed! Order ID: ' + data.orderID + '\n\nWe will verify the amount and contact you within 24 hours to confirm shipping.\n\nFor any questions: sales@zhongke-fastener.com');
             ZKCart.clear(); renderCart();
           },
           onError: function() {
-            alert('Payment error. Please use the Quote Request form.');
+            alert('Payment could not be completed. Please use the Quote Request form instead or email us at sales@zhongke-fastener.com');
           }
         }).render('#paypal-button-container');
       }

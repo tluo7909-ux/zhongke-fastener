@@ -105,14 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
   inquiryForms.forEach(function(form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
+      var fields = form.querySelectorAll('input, textarea, select');
+      var body = 'ZhongKe Fastener — New Inquiry\n\n';
+      fields.forEach(function(f) {
+        if (f.name) body += f.name.charAt(0).toUpperCase() + f.name.slice(1) + ': ' + (f.value || 'N/A') + '\n';
+      });
+      body += '\n---\nPlease reply within 24 hours.';
+      window.open('mailto:sales@zhongke-fastener.com?subject=New Inquiry&body=' + encodeURIComponent(body), '_blank');
       var btn = form.querySelector('button[type="submit"]');
       var orig = btn.textContent;
-      btn.textContent = 'Sending...'; btn.disabled = true; btn.style.opacity = '0.7';
-      setTimeout(function() {
-        btn.textContent = 'Sent Successfully!'; btn.style.background = '#0ea95a'; btn.style.opacity = '1';
-        form.reset();
-        setTimeout(function() { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 2500);
-      }, 1000);
+      btn.textContent = 'Email Opened!'; btn.style.background = '#0ea95a'; btn.style.opacity = '1';
+      setTimeout(function() { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 3000);
     });
   });
 
