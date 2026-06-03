@@ -5,4 +5,5 @@
   <url><loc>https://www.zhongke-fastener.com/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.zhongke-fastener.com/contact.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.zhongke-fastener.com/cart.html</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.zhongke-fastener.com/privacy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
 </urlset>

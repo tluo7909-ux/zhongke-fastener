@@ -593,8 +593,10 @@ h3 { font-size: 1.2rem; }
 }
 
 @media (max-width: 768px) {
-  .trust-bar { display: none; }
-  .navbar { top: 0; }
+  .trust-bar { font-size: 0.65rem; padding: 4px 0; display: block; }
+  .trust-bar .container { justify-content: center; gap: 0.4rem; }
+  .trust-bar span { margin: 0 2px; }
+  .navbar { top: auto; }
   .nav-links { display: none; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--blue-dark); padding: 1.5rem; gap: 1.2rem; border-bottom: 2px solid var(--orange); }
   .mobile-toggle { display: flex; }
