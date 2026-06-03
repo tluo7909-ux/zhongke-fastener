@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (f.name) body += f.name.charAt(0).toUpperCase() + f.name.slice(1) + ': ' + (f.value || 'N/A') + '\n';
       });
       body += '\n---\nPlease reply within 24 hours.';
-      window.open('mailto:sales@zhongke-fastener.com?subject=New Inquiry&body=' + encodeURIComponent(body), '_blank');
+      window.open('mailto:tluo7909@gmail.com?subject=New Inquiry&body=' + encodeURIComponent(body), '_blank');
       var btn = form.querySelector('button[type="submit"]');
       var orig = btn.textContent;
       btn.textContent = 'Email Opened!'; btn.style.background = '#0ea95a'; btn.style.opacity = '1';

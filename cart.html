@@ -78,7 +78,7 @@
         </div>
         <div>
           <h4>Contact</h4>
-          <ul><li>+86 138-0722-1298</li><li>sales@zhongke-fastener.com</li><li>No.18 Kaizhuang, Qindong Town, Dongtai City, Jiangsu, China</li></ul>
+          <ul><li>+86 138-0722-1298</li><li>tluo7909@gmail.com</li><li>No.18 Kaizhuang, Qindong Town, Dongtai City, Jiangsu, China</li></ul>
         </div>
       </div>
       <div class="footer-bottom"><p>&copy; 2025 ZhongKe Fastener. All rights reserved.</p></div>
@@ -136,7 +136,7 @@
           e.preventDefault();
           var d = new FormData(fe);
           var body = 'Quote Request - ZhongKe Fastener\n\n--- Customer ---\nName: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nCompany: ' + d.get('company') + '\nNotes: ' + d.get('notes') + '\n\n--- Items ---\n' + summary + '\n';
-          window.open('mailto:sales@zhongke-fastener.com?subject=Quote Request: ' + d.get('name') + '&body=' + encodeURIComponent(body), '_blank');
+          window.open('mailto:tluo7909@gmail.com?subject=Quote Request: ' + d.get('name') + '&body=' + encodeURIComponent(body), '_blank');
           var t = document.getElementById('toast');
           t.style.display = 'block'; t.textContent = 'Email opened! Send it to complete your request.';
           setTimeout(function(){ t.style.display = 'none'; }, 4000);
@@ -156,11 +156,11 @@
             });
           },
           onApprove: function(data) {
-            alert('Payment confirmed! Order ID: ' + data.orderID + '\n\nWe will verify the amount and contact you within 24 hours to confirm shipping.\n\nFor any questions: sales@zhongke-fastener.com');
+            alert('Payment confirmed! Order ID: ' + data.orderID + '\n\nWe will verify the amount and contact you within 24 hours to confirm shipping.\n\nFor any questions: tluo7909@gmail.com');
             ZKCart.clear(); renderCart();
           },
           onError: function() {
-            alert('Payment could not be completed. Please use the Quote Request form instead or email us at sales@zhongke-fastener.com');
+            alert('Payment could not be completed. Please use the Quote Request form instead or email us at tluo7909@gmail.com');
           }
         }).render('#paypal-button-container');
       }
