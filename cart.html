@@ -116,10 +116,8 @@
       // Quote form
       h += '<div class="checkout-card"><h3>Request a Quote</h3><p>We will reply within 24 hours with pricing and shipping details.</p><form id="quoteForm"><div class="form-group"><label>Your Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div><div class="form-group"><label>Company / Country</label><input type="text" name="company"></div><div class="form-group"><label>Notes</label><textarea name="notes" placeholder="Custom specs, packaging, delivery requirements..."></textarea></div><input type="hidden" name="order" id="orderSummary"><button type="submit" class="btn-submit">Submit Quote Request</button></form></div>';
 
-      // PayPal card — classic form POST (bypasses popup blockers)
-      h += '<div class="checkout-card"><h3>Pay with PayPal</h3><p>Click to pay securely with PayPal. You can enter any amount on the next page.</p><div style="background:#fef3c7;padding:12px;border-radius:8px;margin-bottom:1rem;font-size:0.85rem;">For custom specs or bulk orders, please request a quote first.</div>';
-      h += '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="tluo7909@gmail.com"><input type="hidden" name="item_name" value="ZhongKe Fastener Order"><input type="hidden" name="currency_code" value="USD"><button type="submit" style="display:block;width:100%;background:#ffc439;color:#111;border:none;padding:14px;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;">Pay with PayPal</button></form>';
-      h += '<p style="text-align:center;font-size:0.8rem;color:var(--gray-500);margin-top:8px;">Or send directly to: <strong>tluo7909@gmail.com</strong></p></div>';
+      // PayPal card — Live Smart Payment Buttons
+      h += '<div class="checkout-card"><h3>Pay with PayPal</h3><p>Click to pay securely. You will be redirected to PayPal.</p><div style="background:#fef3c7;padding:12px;border-radius:8px;margin-bottom:1rem;font-size:0.85rem;">For custom specs or bulk orders, request a quote first. We will confirm your order within 24 hours.</div><div id="paypal-button-container"><p style="color:#999;">PayPal loading...</p></div><p style="text-align:center;font-size:0.8rem;color:var(--gray-500);margin-top:8px;">Or send to: <strong>tluo7909@gmail.com</strong></p></div>';
 
       h += '</div>';
 
@@ -146,11 +144,34 @@
         });
       }
 
-      // PayPal — uses simple PayPal.Me link, no SDK required
+      // PayPal Smart Buttons — Live
+      if (typeof paypal !== 'undefined') {
+        paypal.Buttons({
+          style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{
+                description: 'ZhongKe Fastener Products Order',
+                amount: { currency_code: 'USD', value: '1.00' },
+                payee: { email_address: 'tluo7909@gmail.com' }
+              }]
+            });
+          },
+          onApprove: function(data) {
+            alert('Payment successful! Thank you. Order ID: ' + data.orderID + '\n\nWe will contact you within 24 hours to confirm shipping details.\n\nAny questions: tluo7909@gmail.com');
+            ZKCart.clear(); renderCart();
+          },
+          onError: function(err) {
+            alert('Payment was not completed. You can also email us at tluo7909@gmail.com to arrange payment.');
+          }
+        }).render('#paypal-button-container');
+      }
     }
 
     renderCart();
   </script>
+  <!-- PayPal Live SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AfpEZaT8Q8mYI6wsR7yYQV-KcMKmjumrsoIA6MlDlOzEQuGmLyHeqkVkeJJbtAGaNLao5_9G4wDYOeBT&currency=USD" data-namespace="paypal"></script>
   <div class="toast" id="toast"></div>
 <!-- WhatsApp Float Button -->
 <a href="https://wa.me/8613807221298" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
